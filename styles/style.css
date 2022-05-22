@@ -74,7 +74,7 @@ body {
 }
 
 .content .list {
-  margin-left: 8%;
+  padding-left: 200px;
 }
 
 .content .list table {
@@ -98,8 +98,7 @@ body {
 }
 
 .widgets {
-  margin-left: 100px;
-  padding-left: 20px;
+  padding-left: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

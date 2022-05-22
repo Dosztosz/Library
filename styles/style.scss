@@ -63,7 +63,7 @@ body {
         }
     }
     .list {
-        margin-left: 8%;
+        padding-left: 200px;
         table {
             width: 100%;
         }
@@ -83,8 +83,7 @@ body {
 }
 
 .widgets {
-    margin-left: 100px;
-    padding-left: 20px;
+    padding-left: 200px;
     display: flex;
     flex-wrap: wrap;
     .widgets-block {
