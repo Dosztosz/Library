@@ -1,0 +1,23 @@
+.sidebar{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    .bar-item {
+        i {
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 2.5rem;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+.content {
+    margin-left: 200px;
+    padding-left: 20px;
+}
