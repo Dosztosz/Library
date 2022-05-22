@@ -51,6 +51,31 @@ body {
   float: right;
 }
 
+.content .navbar-top li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.content .list {
+  margin-left: 8%;
+}
+
+.content .list table {
+  width: 100%;
+}
+
+.content .list tr {
+  height: 40px;
+}
+
+.content .list a {
+  color: blue;
+}
+
+.content .list a:hover {
+  color: aqua;
+}
+
 .widgets {
   margin-left: 100px;
   padding-left: 20px;
@@ -62,20 +87,28 @@ body {
 }
 
 .widgets .widgets-block {
-  padding: 20px;
+  padding: 1vw;
   margin: 20px;
   display: block;
-  height: 150px;
-  width: 300px;
+  height: 10vw;
+  width: 18vw;
   background-color: bisque;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .widgets .widgets-block h2 {
   text-align: left;
+  font-size: 1.5vw;
 }
 
 .widgets .widgets-block p {
-  margin-top: 50px;
+  margin-top: 1vw;
   text-align: right;
+  font-size: 1.5vw;
+}
+
+.widgets .widgets-block:hover {
+  background-color: aquamarine;
 }
 /*# sourceMappingURL=style.css.map */
