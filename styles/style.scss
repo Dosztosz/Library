@@ -19,30 +19,52 @@ body {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
+    /* Side navigation links */
+    a {
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+    }
+    /* Change color on hover */
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 }
-
-
-/* Side navigation links */
-
-.sidenav a {
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-/* Change color on hover */
-
-.sidenav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 
 /* Style the content */
 
 .content {
-    margin-left: 200px;
+    .navbar-top {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(233, 233, 233);
+        ul {
+            display: flex;
+            justify-content: space-between;
+            float: right;
+        }
+    }
+}
+.widgets {
+    margin-left: 100px;
     padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .widgets-block{
+        padding: 20px;
+        margin: 20px;
+        display: block;
+        height: 150px;
+        width: 300px;
+        background-color: bisque;
+        h2 {
+            text-align: left;
+        }
+        p {
+            margin-top: 50px;
+            text-align: right;
+        }
+    }
 }

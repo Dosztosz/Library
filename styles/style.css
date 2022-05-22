@@ -18,9 +18,10 @@ body {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
+  /* Side navigation links */
+  /* Change color on hover */
 }
 
-/* Side navigation links */
 .sidenav a {
   color: white;
   padding: 16px;
@@ -28,15 +29,53 @@ body {
   display: block;
 }
 
-/* Change color on hover */
 .sidenav a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Style the content */
-.content {
-  margin-left: 200px;
+.content .navbar-top {
+  width: 100%;
+  height: 60px;
+  background-color: #e9e9e9;
+}
+
+.content .navbar-top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: right;
+}
+
+.widgets {
+  margin-left: 100px;
   padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.widgets .widgets-block {
+  padding: 20px;
+  margin: 20px;
+  display: block;
+  height: 150px;
+  width: 300px;
+  background-color: bisque;
+}
+
+.widgets .widgets-block h2 {
+  text-align: left;
+}
+
+.widgets .widgets-block p {
+  margin-top: 50px;
+  text-align: right;
 }
 /*# sourceMappingURL=style.css.map */
