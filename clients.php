@@ -11,23 +11,11 @@
 </head>
 
 <body>
-    <div class="sidenav">
-        <a href="index.html" class="bar-item"><i class="fa fa-house-user"></i>Main Page</a>
-        <a href="list.html" class="bar-item">List of books</a>
-        <a href="rented.html" class="bar-item">Rented Books</a>
-        <a href="overdue.html" class="bar-item">Overdue Books</a>
-        <a href="clients.html" class="bar-item">Customers</a>
-    </div>
+    <?php include('includes/header.php') ?>
     <div class="content">
-        <div class="navbar-top">
-            <ul>
-                <li><img src=""></li>
-                <li>Welcome Tomasz Dębosz</li>
-                <li>Edit</li>
-            </ul>
-        </div>
+        <?php include('includes/navbar-top.php') ?>
         <div class="list">
-            <h1>Lista Zaległych Wypożyczeń</h1>
+            <h1>Lista Klientów</h1>
             <table>
                 <tr>
                     <td>Name</td>

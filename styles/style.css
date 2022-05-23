@@ -15,12 +15,8 @@ body {
   font-size: 15px;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   background-color: #111;
   overflow-x: hidden;
-  /* Side navigation links */
-  /* Change color on hover */
 }
 
 .sidenav a {
@@ -97,7 +93,7 @@ body {
   color: aqua;
 }
 
-.widgets {
+.content .widgets {
   padding-left: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +102,7 @@ body {
       flex-wrap: wrap;
 }
 
-.widgets .widgets-block {
+.content .widgets .widgets-block {
   padding: 1vw;
   margin: 20px;
   display: block;
@@ -117,18 +113,51 @@ body {
   transition: 0.6s;
 }
 
-.widgets .widgets-block h2 {
+.content .widgets .widgets-block h2 {
   text-align: left;
   font-size: 1.5vw;
 }
 
-.widgets .widgets-block p {
+.content .widgets .widgets-block p {
   margin-top: 1vw;
   text-align: right;
   font-size: 1.5vw;
 }
 
-.widgets .widgets-block:hover {
+.content .widgets .widgets-block:hover {
   background-color: aquamarine;
+}
+
+.login-box {
+  display: block;
+  margin: auto;
+}
+
+.login-box .rent-box {
+  display: block;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+}
+
+.login-box .rent-box .full-form {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.login-box .rent-box .short-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login-box .rent-box .full-form, .login-box .rent-box .short-form {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
