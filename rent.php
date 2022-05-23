@@ -6,6 +6,15 @@ session_start();
 		header('Location: index.php');
 		exit();
 	}
+    require_once ('includes/config.php');
+
+    $conn = new mysqli($servername, $username, $password, $db_name);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+    $sql = "SELECT * FROM costumes";
+    $results = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +37,16 @@ session_start();
                 <h3>Rent a costume</h3>
                 <form method="POST">
                     <div class="short-container">
-                        <label>Nazwa Stroju</label>
-                        <input class="short-form" type="text">
-                        <label>Numer</label>
-                        <input class="short-form" type="text">
-                        <label>Rozmiar</label>
-                        <input class="short-form" type="text">
-                        <label>Cena</label>
-                        <input class="short-form" type="text">
+                        <label for="cars">Wybierz Strój:</label>
+                        <select id="cars" name="cars">
+                        <?php
+                        if($results->num_rows>0){
+                            while($row = $results->fetch_assoc()) {
+                                echo '<option value="'.$row['id'].'">'.$row['name']." - ".$row['size'].'</option>';
+                            }
+                        }
+                        ?>
+                        </select>
                     </div>
                     <label>Imie i Nazwisko</label>
                     <input class="full-form" type="text">
@@ -43,6 +54,10 @@ session_start();
                     <input class="full-form" type="text">
                     <label>Adres zamieszkania</label>
                     <input class="full-form" type="text">
+                    <label>Data Wypożyczenia</label>
+                    <input type="date" name="" id="">
+                    <label>Data Zdania</label>
+                    <input type="date" name="" id="">
                     <button type="submit">Submit</button>
                 </form>
             </div>
