@@ -35,7 +35,7 @@ session_start();
         <div class="login-box">
             <div class="rent-box">
                 <h3>Rent a costume</h3>
-                <form method="POST">
+                <form method="POST" action="functions/rent.php">
                     <div class="short-container">
                         <label for="cars">Wybierz Strój:</label>
                         <select id="cars" name="cars">
@@ -49,15 +49,15 @@ session_start();
                         </select>
                     </div>
                     <label>Imie i Nazwisko</label>
-                    <input class="full-form" type="text">
+                    <input class="full-form" name="name" type="text">
                     <label>Numer Telefonu</label>
-                    <input class="full-form" type="text">
+                    <input class="full-form" name="phone" type="text">
                     <label>Adres zamieszkania</label>
-                    <input class="full-form" type="text">
+                    <input class="full-form" name="address" type="text">
                     <label>Data Wypożyczenia</label>
-                    <input type="date" name="" id="">
+                    <input type="date" name="dateorder" id="">
                     <label>Data Zdania</label>
-                    <input type="date" name="" id="">
+                    <input type="date" name="datereturn" id="">
                     <button type="submit">Submit</button>
                 </form>
             </div>

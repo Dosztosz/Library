@@ -15,6 +15,7 @@ session_start();
 
     $sql = "SELECT * FROM costumes";
     $results = $conn->query($sql);
+    $sqle = "SELECT * FROM category"
 ?>
 <!DOCTYPE html>
 <html lang="en">
