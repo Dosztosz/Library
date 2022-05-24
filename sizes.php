@@ -13,7 +13,7 @@ session_start();
         die("Connection failed: " . $conn->connect_error);
       }
 
-    $sql = "SELECT * FROM costumes";
+    $sql = "SELECT * FROM sizes";
     $results = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -41,21 +41,17 @@ session_start();
             </div>
             <table>
                 <thead>
-                    <td>Number</td>
+                    <td>Id</td>
                     <td>Name</td>
-                    <td>Size</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
+                    <td>Edit</td>
                 </thead>
                 <?php
                 if($results->num_rows>0){
                     while($row = $results->fetch_assoc()) {
                         echo '<tr>
-                        <td>'.$row['number'].'</td>
-                        <td>'.$row['name'].'</td>
+                        <td>'.$row['id'].'</td>
                         <td>'.$row['size'].'</td>
-                        <td>'.$row['price'].'</td>
-                        <td>'.$row['quantity'].'</td>
+                        <td><a href="edit_size.php?id='.$row['id'].'">edit</a></td>
                     </tr>';
                     }
                 }

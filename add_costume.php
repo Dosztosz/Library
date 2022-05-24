@@ -13,7 +13,7 @@ session_start();
         die("Connection failed: " . $conn->connect_error);
       }
 
-    $sql = "SELECT * FROM costumes";
+    $sql = "SELECT * FROM sizes";
     $results = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -35,24 +35,23 @@ session_start();
         <div class="login-box">
             <div class="rent-box">
                 <h3>Rent a costume</h3>
-                <form method="POST">
-                    <div class="short-container">
-                        <label>Nazwa Stroju</label>
-                        <input class="short-form" type="text">
-                        <label>Numer</label>
-                        <input class="short-form" type="text">
-                        <label>Rozmiar</label>
-                        <input class="short-form" type="text">
-                        <label>Cena</label>
-                        <input class="short-form" type="text">
-                    </div>
-                    <label>Imie i Nazwisko</label>
-                    <input class="full-form" type="text">
-                    <label>Numer Telefonu</label>
-                    <input class="full-form" type="text">
-                    <label>Adres zamieszkania</label>
-                    <input class="full-form" type="text">
-                    <button type="submit">Submit</button>
+                <form method="POST" action="add_cost.php">
+                    <label>Nazwa Stroju</label>
+                    <input class="full-form" name="name" type="text">
+                    <label>Numer</label>
+                    <input class="full-form" name="number" type="text">
+                    <label>Rozmiary:</label><br>
+                    <?php
+                        if($results->num_rows>0){
+                            while ($row = $results->fetch_assoc()){
+                                echo '<input type="checkbox" id="'.$row['id'].'" name="'.$row['id'].'">
+                                <label for="size-104">'.$row['size'].'</label><br>';
+                            }
+                        }
+                    ?>
+                    <label>Cena</label>
+                    <input class="full-form" name="price" type="text">
+                    <button type="submit">submit</button>
                 </form>
             </div>
         </div>

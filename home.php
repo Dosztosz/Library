@@ -33,9 +33,6 @@ session_start();
             <div class="widgets-block">
                 <h2>All available costumes</h2>
                 <p>1320 Costumes</div>
-            <div class="widgets-block">
-                <h2>Rented Costumes</h2>
-                <p>8 Rents</div>
         </div>
     </div>
 </body>
