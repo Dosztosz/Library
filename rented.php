@@ -6,6 +6,16 @@ session_start();
 		header('Location: index.php');
 		exit();
 	}
+    require_once ('includes/config.php');
+
+    $conn = new mysqli($servername, $username, $password, $db_name);
+    $conn->set_charset("utf8");
+    if($conn->connect_error) {
+        die("connection_failed: " . $conn->connect_error);
+    }
+    $sql ="SELECT * FROM rentals";
+    $results = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,38 +36,51 @@ session_start();
         <div class="list">
             <h1>Rented Books</h1>
             <table>
-                <tr>
-                    <td>Name and vorname</td>
-                    <td>Id of book</td>
-                    <td>Date of rent</td>
-                    <td>Date of return</td>
-                    <td>Confirm return</td>
-                    <td>Edit</td>
-                </tr>
-                <tr>
-                    <td>Tomasz Dębosz</td>
-                    <td>#43</td>
-                    <td>10.10.2022</td>
-                    <td>15.10.2022</td>
-                    <td><a>Confirm</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
-                <tr>
-                    <td>Bronisław Koń</td>
-                    <td>#23</td>
-                    <td>12.09.2022</td>
-                    <td>15.10.2022</td>
-                    <td><a>Confirm</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
-                <tr>
-                    <td>Konisław Broń</td>
-                    <td>#53</td>
-                    <td>13.10.2022</td>
-                    <td>17.10.2022</td>
-                    <td><a>Confirm</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
+                <thead>
+                    <th>Rent Id</th>
+                    <th>Name and vorname</th>
+                    <th>Number</th>
+                    <th>Size</th>
+                    <th>Date of return</th>
+                    <th>Address</td>
+                    <th>Phone</td>
+                    <th>Confirm return</th>
+                    <th>Edit</th>
+                </thead>
+                <?php
+                    if($results->num_rows>0) {
+                        while($row = $results->fetch_assoc()) {
+                            if ($row['status'] == "rented"){
+                                echo ' <tr>
+                                <td>'.$row['id'].'</td>
+                                <td>'.$row['name'].'</td>
+                                <td>'.$row['costume_id'].'</td>
+                                <td>'.$row['size'].'</td>
+                                <td>'.$row['date_return'].'</td>
+                                <td>'.$row['address'].'</td>
+                                <td>'.$row['phone'].'</td>
+                                <td><a href="functions/confirm.php?id='.$row['id'].'&status=done">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id'].'">Edit</a></td>
+                            </tr>
+                            ';
+                            }
+                            elseif ($row['status'] == "overdue"){
+                                echo ' <tr>
+                                <td style="background-color: red;">'.$row['id'].'</td>
+                                <td>'.$row['name'].'</td>
+                                <td>'.$row['costume_id'].'</td>
+                                <td>'.$row['size'].'</td>
+                                <td>'.$row['date_return'].'</td>
+                                <td>'.$row['address'].'</td>
+                                <td>'.$row['phone'].'</td>
+                                <td><a href="functions/confirm.php?id='.$row['id'].'&status=done">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id'].'">Edit</a></td>
+                            </tr>
+                            ';
+                            }
+                        }
+                    }
+                ?>
 
             </table>
         </div>

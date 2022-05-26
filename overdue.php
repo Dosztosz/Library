@@ -6,6 +6,16 @@ session_start();
 		header('Location: index.php');
 		exit();
 	}
+    require_once ('includes/config.php');
+
+    $conn = new mysqli($servername, $username, $password, $db_name);
+    $conn->set_charset("utf8");
+    if($conn->connect_error) {
+        die("connection_failed: " . $conn->connect_error);
+    }
+    $sql ="SELECT * FROM rentals";
+    $results = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,40 +34,39 @@ session_start();
     <div class="content">
         <?php include('includes/navbar-top.php') ?>
         <div class="list">
-            <h1>Lista Zaległych Wypożyczeń</h1>
+            <h1>Rented Books</h1>
             <table>
-                <tr>
-                    <td>Name</td>
-                    <td>EAN</td>
-                    <td>Number of books</td>
-                    <td>Number of rents</td>
-                    <td>Rent</td>
-                    <td>Edit</td>
-                </tr>
-                <tr>
-                    <td>Jubilatka</td>
-                    <td>4728345912312</td>
-                    <td>10</td>
-                    <td>3</td>
-                    <td><a>Rent</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
-                <tr>
-                    <td>Zielona Mila</td>
-                    <td>1238438593023</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td><a>Rent</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
-                <tr>
-                    <td>Kupicalka</td>
-                    <td>3578474742546</td>
-                    <td>14</td>
-                    <td>3</td>
-                    <td><a>Rent</a></td>
-                    <td><a>Edit</a></td>
-                </tr>
+                <thead>
+                    <th>Rent Id</th>
+                    <th>Name and vorname</th>
+                    <th>Number</th>
+                    <th>Size</th>
+                    <th>Date of return</th>
+                    <th>Address</td>
+                    <th>Phone</td>
+                    <th>Confirm return</th>
+                    <th>Edit</th>
+                </thead>
+                <?php
+                    if($results->num_rows>0) {
+                        while($row = $results->fetch_assoc()) {
+                            if ($row['status'] == "overdue"){
+                                echo ' <tr>
+                                <td style="background-color: red;">'.$row['id'].'</td>
+                                <td>'.$row['name'].'</td>
+                                <td>'.$row['costume_id'].'</td>
+                                <td>'.$row['size'].'</td>
+                                <td>'.$row['date_return'].'</td>
+                                <td>'.$row['address'].'</td>
+                                <td>'.$row['phone'].'</td>
+                                <td><a href="functions/confirm.php?id='.$row['id'].'&status=done">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id'].'">Edit</a></td>
+                            </tr>
+                            ';
+                            }
+                        }
+                    }
+                ?>
 
             </table>
         </div>
