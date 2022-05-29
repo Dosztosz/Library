@@ -13,7 +13,7 @@ session_start();
     if($conn->connect_error) {
         die("connection_failed: " . $conn->connect_error);
     }
-    $sql ="SELECT * FROM rentals";
+    $sql ="SELECT * FROM rentals costumes";
     $results = $conn->query($sql);
 
 ?>
@@ -39,8 +39,7 @@ session_start();
                 <thead>
                     <th>Rent Id</th>
                     <th>Name and vorname</th>
-                    <th>Number</th>
-                    <th>Size</th>
+                    <th>Costume rented</th>
                     <th>Date of return</th>
                     <th>Address</td>
                     <th>Phone</td>
@@ -55,7 +54,6 @@ session_start();
                                 <td>'.$row['id'].'</td>
                                 <td>'.$row['name'].'</td>
                                 <td>'.$row['costume_id'].'</td>
-                                <td>'.$row['size'].'</td>
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
@@ -69,7 +67,6 @@ session_start();
                                 <td style="background-color: red;">'.$row['id'].'</td>
                                 <td>'.$row['name'].'</td>
                                 <td>'.$row['costume_id'].'</td>
-                                <td>'.$row['size'].'</td>
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>

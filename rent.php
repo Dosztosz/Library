@@ -37,8 +37,8 @@ session_start();
                 <h3>Rent a costume</h3>
                 <form method="POST" action="functions/rent.php">
                     <div class="short-container">
-                        <label for="cars">Wybierz Strój:</label>
-                        <select id="cars" name="cars">
+                        <label for="costume_id">Wybierz Strój:</label>
+                        <select id="costume_id" name="costume_id">
                         <?php
                         if($results->num_rows>0){
                             while($row = $results->fetch_assoc()) {
@@ -54,6 +54,8 @@ session_start();
                     <input class="full-form" name="phone" type="text">
                     <label>Adres zamieszkania</label>
                     <input class="full-form" name="address" type="text">
+                    <label>Cena</label>
+                    <input class="full-form" name="price" type="text">
                     <label>Data Wypożyczenia</label>
                     <input type="date" name="dateorder" id="">
                     <label>Data Zdania</label>

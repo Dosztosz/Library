@@ -9,25 +9,24 @@ if (!isset($_SESSION['zalogowany']))
 require_once ('../includes/config.php');
 
 $conn = new mysqli($servername, $username, $password, $db_name);
+$conn->set_charset("utf8");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
 
-$sql = "SELECT * FROM rentals";
-$results = $conn->query($sql);
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$address = $_POST['address'];
+$orderdate = $_POST['dateorder'];
+$datereturn = $_POST['datereturn'];
+$costume = $_POST['costume_id'];
+$price = $_POST['price'];
 
-if(isset($_POST['name'])){
-    echo    'tak działa byczqu';
-    echo $_POST['name'];
-    echo $_POST['phone'];
-    echo $_POST['address'];
-    echo $_POST['dateorder'];
-    echo $_POST['datereturn'];
-}
-else {
-    echo    'nie to nie tak byczqu';
-}
+$sql = "INSERT INTO rentals (id, name, date_rent, date_return, costume_id, price, phone, address, status) VALUES ('0', '$name', '$orderdate', '$datereturn', '$costume', '$price', '$phone', '$address', 'rented')"; 
 
-
-
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 ?>
