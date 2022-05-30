@@ -37,9 +37,8 @@
                 <p><?php echo $rowcount; ?> Rents</p></div>
             <div class="widgets-block">
                 <h2>Overdue orders</h2>
-                <p><?php echo $rowoverdue; ?> Rents</p></div>
+                <p><?php echo $rowoverdue; ?> Rents</div>
         </div>
     </div>
 </body>
-
 </html>
