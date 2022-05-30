@@ -12,6 +12,7 @@ session_start();
     if($conn->connect_error){
         die("connection_failed: " . $conn->connect_error);
     }
+    include ('functions/check_overdue.php');
     $sql = "SELECT * FROM rentals";
     $sql_next = "SELECT * FROM rentals WHERE `status` = 'overdue'";
     $results = $conn->query($sql);

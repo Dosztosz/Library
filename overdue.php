@@ -52,7 +52,7 @@ session_start();
                         while($row = $results->fetch_assoc()) {
                             if ($row['status'] == "overdue"){
                                 echo ' <tr>
-                                <td style="background-color: red;">'.$row['id'].'</td>
+                                <td style="background-color: red;">'.$row['id_rent'].'</td>
                                 <td>'.$row['name'].'</td>
                                 <td>'.$row['costume_id'].'</td>
                                 <td>'.$row['size'].'</td>

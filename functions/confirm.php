@@ -17,7 +17,7 @@
         die("connection error: " . $conn->connect_error);
     }
     else {
-        $conn->query("UPDATE `rentals` SET `status` = '$status' WHERE `id` = $id;");
+        $conn->query("UPDATE `rentals` SET `status` = '$status' WHERE `id_rent` = $id;");
         header('Location: ../rented.php');
     }
 

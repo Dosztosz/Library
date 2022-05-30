@@ -44,7 +44,7 @@ session_start();
                     <?php
                         if($results->num_rows>0){
                             while ($row = $results->fetch_assoc()){
-                                echo '<input type="checkbox" id="'.$row['id'].'" name="'.$row['id'].'">
+                                echo '<input type="checkbox" id="'.$row['id_sizes'].'" name="'.$row['id_sizes'].'">
                                 <label for="size-104">'.$row['size'].'</label><br>';
                             }
                         }
