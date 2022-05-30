@@ -10,6 +10,7 @@
 
     $id = $_GET['id'];
     $status = $_GET['status'];
+    $costume_id = $_GET['product'];
 
     $conn = new mysqli ($servername, $username, $password, $db_name);
     $conn->set_charset("utf8");
@@ -18,6 +19,7 @@
     }
     else {
         $conn->query("UPDATE `rentals` SET `status` = '$status' WHERE `id_rent` = $id;");
+        $conn->query("UPDATE `costumes` SET `quantity` = `quantity` +1 WHERE `costumes`.`id_product` = $costume_id;");
         header('Location: ../rented.php');
     }
 

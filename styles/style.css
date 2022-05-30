@@ -212,4 +212,10 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+@media only screen and (max-width: 900px) {
+  .mobile {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */

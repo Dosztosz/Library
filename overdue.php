@@ -1,11 +1,6 @@
 <?php
-session_start();
-	
-	if (!isset($_SESSION['zalogowany']))
-	{
-		header('Location: index.php');
-		exit();
-	}
+    include ('functions/session.php');
+	$site_title = "Overdue Orders";
     require_once ('includes/config.php');
 
     $conn = new mysqli($servername, $username, $password, $db_name);
@@ -13,7 +8,10 @@ session_start();
     if($conn->connect_error) {
         die("connection_failed: " . $conn->connect_error);
     }
-    $sql ="SELECT * FROM rentals";
+    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.name_costume, costumes.size, rentals.status  
+    FROM rentals 
+    INNER JOIN costumes 
+    ON rentals.costume_id = costumes.id_product";
     $results = $conn->query($sql);
 
 ?>
@@ -21,12 +19,7 @@ session_start();
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library managment system</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/8d0eb52cc9.js" crossorigin="anonymous"></script>
+    <?php include ('includes/head.php') ?>
 </head>
 
 <body>
@@ -34,7 +27,7 @@ session_start();
     <div class="content">
         <?php include('includes/navbar-top.php') ?>
         <div class="list">
-            <h1>Rented Books</h1>
+            <h1><?php echo $site_title; ?></h1>
             <table>
                 <thead>
                     <th>Rent Id</th>
@@ -52,15 +45,15 @@ session_start();
                         while($row = $results->fetch_assoc()) {
                             if ($row['status'] == "overdue"){
                                 echo ' <tr>
-                                <td style="background-color: red;">'.$row['id_rent'].'</td>
+                                <td>'.$row['id_rent'].'</td>
                                 <td>'.$row['name'].'</td>
-                                <td>'.$row['costume_id'].'</td>
+                                <td>'.$row['name_costume'].'</td>
                                 <td>'.$row['size'].'</td>
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id'].'&status=done">Confirm</a></td>
-                                <td><a href="functions/edit.php?id='.$row['id'].'">Edit</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
                             </tr>
                             ';
                             }

@@ -4,5 +4,5 @@ Hello, I am here to introduce you to the new project I am creating in pure HTML 
 
 The installation process is very easy just import the sql file into your database and change the infromations in /includes/config.php the sql will import sample data that you can delete. The login data is:
 
-Username: dosztosz
-Password: dosztosz
+Username: admin
+Password: admin

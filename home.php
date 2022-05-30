@@ -1,12 +1,7 @@
 <?php
-session_start();
-	
-	if (!isset($_SESSION['zalogowany']))
-	{
-		header('Location: index.php');
-		exit();
-	}
+    include ('functions/session.php');
     require_once ('includes/config.php');
+    $site_title = "Dashboard";
     $conn = new mysqli($servername, $username, $password, $db_name);
     $conn->set_charset("utf8");
     if($conn->connect_error){
@@ -29,12 +24,7 @@ session_start();
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costume rental - admin page</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/8d0eb52cc9.js" crossorigin="anonymous"></script>
+    <?php include ('includes/head.php') ?>
 </head>
 
 <body>
@@ -43,14 +33,11 @@ session_start();
         <?php include('includes/navbar-top.php') ?>
         <div class="widgets">
             <div class="widgets-block">
-                <h2>Rented today</h2>
-                <p><?php echo $rowcount; ?> Costumes</div>
+                <h2>Total orders</h2>
+                <p><?php echo $rowcount; ?> Rents</p></div>
             <div class="widgets-block">
-                <h2>Overdue Rents</h2>
-                <p><?php echo $rowoverdue; ?> Costumes</div>
-            <div class="widgets-block">
-                <h2>All available costumes</h2>
-                <p>1320 Costumes</div>
+                <h2>Overdue orders</h2>
+                <p><?php echo $rowoverdue; ?> Rents</p></div>
         </div>
     </div>
 </body>

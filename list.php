@@ -1,12 +1,7 @@
 <?php
-session_start();
-	
-	if (!isset($_SESSION['zalogowany']))
-	{
-		header('Location: index.php');
-		exit();
-	}
+    include ('functions/session.php');
     require_once ('includes/config.php');
+    $site_title = "Products";
 
     $conn = new mysqli($servername, $username, $password, $db_name);
     if ($conn->connect_error) {
@@ -21,12 +16,7 @@ session_start();
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library managment system</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/8d0eb52cc9.js" crossorigin="anonymous"></script>
+    <?php include ('includes/head.php') ?>
 </head>
 
 <body>
@@ -35,9 +25,7 @@ session_start();
         <?php include('includes/navbar-top.php') ?>
         <div class="list">
             <div class="menu">
-                <h1>
-                    Spis Strojów
-                </h1>
+                <h1><?php echo $site_title; ?></h1>
                 <a href="add_costume.php">Dodaj Strój</a>
             </div>
             <table>
@@ -53,7 +41,7 @@ session_start();
                     while($row = $results->fetch_assoc()) {
                         echo '<tr>
                         <td>'.$row['number'].'</td>
-                        <td>'.$row['name'].'</td>
+                        <td>'.$row['name_costume'].'</td>
                         <td>'.$row['size'].'</td>
                         <td>'.$row['price'].'</td>
                         <td>'.$row['quantity'].'</td>

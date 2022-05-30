@@ -1,13 +1,7 @@
 <?php
-session_start();
-	
-	if (!isset($_SESSION['zalogowany']))
-	{
-		header('Location: index.php');
-		exit();
-	}
+include ('functions/session.php');
     require_once ('includes/config.php');
-
+    $site_title = "Size configurations";
     $conn = new mysqli($servername, $username, $password, $db_name);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -23,7 +17,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library managment system</title>
+    <title><?php echo $site_title; ?></title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/8d0eb52cc9.js" crossorigin="anonymous"></script>
 </head>
@@ -34,9 +28,7 @@ session_start();
         <?php include('includes/navbar-top.php') ?>
         <div class="list">
             <div class="menu">
-                <h1>
-                    Spis Strojów
-                </h1>
+                <h1><?php echo $site_title; ?></h1>
                 <a href="add_costume.php">Dodaj Strój</a>
             </div>
             <table>
@@ -49,9 +41,9 @@ session_start();
                 if($results->num_rows>0){
                     while($row = $results->fetch_assoc()) {
                         echo '<tr>
-                        <td>'.$row['id'].'</td>
+                        <td>'.$row['id_sizes'].'</td>
                         <td>'.$row['size'].'</td>
-                        <td><a href="edit_size.php?id='.$row['id'].'">edit</a></td>
+                        <td><a href="edit_size.php?id='.$row['id_sizes'].'">edit</a></td>
                     </tr>';
                     }
                 }
