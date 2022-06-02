@@ -30,14 +30,18 @@
                     <label>Numer</label>
                     <input class="full-form" name="number" type="text">
                     <label>Rozmiary:</label><br>
-                    <?php
-                        if($results->num_rows>0){
-                            while ($row = $results->fetch_assoc()){
-                                echo '<input type="checkbox" id="'.$row['id_sizes'].'" name="'.$row['id_sizes'].'">
-                                <label for="size-104">'.$row['size'].'</label><br>';
-                            }
-                        }
-                    ?>
+                    <input type="checkbox" value="104" name="checkbox[]">
+                    <label for="size-104">104</label><br>
+                    <input type="checkbox" value="116" name="checkbox[]">
+                    <label for="size-1116">116</label><br>
+                    <input type="checkbox" value="128" name="checkbox[]">
+                    <label for="size-128">128</label><br>
+                    <input type="checkbox" value="140" name="checkbox[]">
+                    <label for="size-1140">140</label><br>
+                    <input type="checkbox" value="152" name="checkbox[]">
+                    <label for="size-152">152</label><br>
+                    <input type="checkbox" value="duzy" name="checkbox[]">
+                    <label for="size-duzy">Duży</label><br>
                     <label>Cena</label>
                     <input class="full-form" name="price" type="text">
                     <button type="submit">submit</button>
