@@ -8,7 +8,7 @@
     if($conn->connect_error) {
         die("connection_failed: " . $conn->connect_error);
     }
-    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.name_costume, costumes.size, rentals.status  
+    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, costumes.id_product, rentals.price, rentals.phone, rentals.address, costumes.name_costume, costumes.size, rentals.status  
     FROM rentals 
     INNER JOIN costumes 
     ON rentals.costume_id = costumes.id_product";
@@ -52,7 +52,7 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done">Confirm</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['id_product'].'">Confirm</a></td>
                                 <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
                             </tr>
                             ';
