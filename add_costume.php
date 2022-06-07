@@ -44,6 +44,7 @@
                     <label for="size-duzy">Duży</label><br>
                     <label>Cena</label>
                     <input class="full-form" name="price" type="text">
+                    <input type="file" name="file">
                     <button type="submit">submit</button>
                 </form>
             </div>
