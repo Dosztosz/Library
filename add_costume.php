@@ -24,7 +24,7 @@
         <div class="login-box">
             <div class="rent-box">
                 <h3><?php echo $site_title; ?></h3>
-                <form method="POST" action="functions/add_cost.php">
+                <form method="POST" action="functions/add_cost.php" enctype = "multipart/form-data">
                     <label>Nazwa Stroju</label>
                     <input class="full-form" name="name" type="text">
                     <label>Numer</label>
@@ -44,7 +44,7 @@
                     <label for="size-duzy">Duży</label><br>
                     <label>Cena</label>
                     <input class="full-form" name="price" type="text">
-                    <input type="file" name="file">
+                    <input type="file" name="image">
                     <button type="submit">submit</button>
                 </form>
             </div>

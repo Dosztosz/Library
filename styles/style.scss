@@ -176,6 +176,33 @@ body {
         }
     }
 }
+.kafelki {
+    display: flex;
+    flex-wrap: wrap;
+    .kafelek {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 15px;
+        border: 2px solid;
+        flex-direction: column;
+        width: 225px;
+        .numer {
+            font-size: 2rem;
+        }
+        p{
+            margin: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        img{
+            align-content: center;
+            width: 200px;
+            height: 250px;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
     .mobile {
