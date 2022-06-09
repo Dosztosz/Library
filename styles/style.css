@@ -1,3 +1,4 @@
+@import url("dashboard.scss");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,7 +7,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f6f7;
+  background-color: #f6f7fb;
 }
 
 /* Style the side navigation */
@@ -158,8 +159,10 @@ body {
   margin: 20px;
   display: block;
   height: 10vw;
-  width: 18vw;
-  background-color: bisque;
+  width: 24vw;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }

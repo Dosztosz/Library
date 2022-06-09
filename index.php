@@ -14,21 +14,29 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Logowania</title>
 </head>
 <body>
-<div class="login-box">
-    <div class="rent-box">
-        <h3>Rent a costume</h3>
-        <form method="POST" action="login.php">
-        <label>Login</label>
-        <input class="full-form" type="text" name="login">
-        <label>Hasło</label>
-        <input class="full-form" type="text" name="password" type="password">
-        <button type="submit">Submit</button>
-        </form>
+<div class="container">
+    <div class="logo">Rent a costume</div>
+    <div class="login-item">
+      <form action="login.php" method="post" class="form form-login">
+        <div class="form-field">
+          <label class="user" for="login-username"><span class="hidden">Login</span></label>
+          <input name="login" id="login-username" type="text" class="form-input" placeholder="Username" required>
+        </div>
+
+        <div class="form-field">
+          <label class="lock" for="login-password"><span class="hidden">Hasło</span></label>
+          <input name="password" id="login-password" type="password" class="form-input" placeholder="Password" required>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Log in">
+        </div>
+      </form>
     </div>
 </div>
 </body>

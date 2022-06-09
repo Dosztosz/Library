@@ -5,10 +5,9 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f6f7;
+    background-color: #f6f7fb;
 }
-
-
+@import url('dashboard.scss');
 /* Style the side navigation */
 .sidenav {
     border-top-right-radius: 20px;
@@ -133,8 +132,9 @@ body {
             margin: 20px;
             display: block;
             height: 10vw;
-            width: 18vw;
-            background-color: bisque;
+            width: 24vw;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
             transition: 0.6s;
             h2 {
                 text-align: left;

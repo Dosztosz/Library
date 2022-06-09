@@ -31,13 +31,47 @@
     <?php include('includes/header.php') ?>
     <div class="content">
         <?php include('includes/navbar-top.php') ?>
+        <h1>Rental Dashboard</h1>
         <div class="widgets">
             <div class="widgets-block">
                 <h2>Total orders</h2>
-                <p><?php echo $rowcount; ?> Rents</p></div>
+                <p><?php echo $rowcount; ?> Rents</p>
+            </div>
             <div class="widgets-block">
                 <h2>Overdue orders</h2>
-                <p><?php echo $rowoverdue; ?> Rents</div>
+                <p><?php echo $rowoverdue; ?> Rents</p>
+            </div>
+            <div class="widgets-block">
+                <h2>Overdue orders</h2>
+                <p><?php echo $rowoverdue; ?> Rents</p>
+            </div>
+        </div>
+        <h2 class="rental-box-h2">Upcoming Rentals</h2>
+        <div class="rental-box-dash">
+            <div class="rent-box-dash">
+                <div class="rent-box-info">
+                <p>Indianin 104</p>
+                <p>Tomasz Pekasz</p>
+                <p>Zapłacone</p>
+                </div>
+                <div class="rent-box-info">
+                <p>termin wypożyczenia</p>
+                <button>Confirm</button>
+                </div>
+            </div>
+            <div class="rent-box-dash">
+                <p>Strój</p>
+                <p>Imie nazwisko</p>
+                <p>zapłacone?</p>
+                <p>termin wypożyczenia</p>
+                <button>Confirm</button>
+            </div>
+        </div>
+        <h2>Most Popular Costumes</h2>
+        <div class="rental-box-dash">
+            <div class="rent-box-dash">
+
+            </div>
         </div>
     </div>
 </body>
