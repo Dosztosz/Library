@@ -31,7 +31,7 @@
     <?php include('includes/header.php') ?>
     <div class="content">
         <?php include('includes/navbar-top.php') ?>
-        <h1>Rental Dashboard</h1>
+        <h1 class="rental-box-h2">Rental Dashboard</h1>
         <div class="widgets">
             <div class="widgets-block">
                 <h2>Total orders</h2>
@@ -50,27 +50,21 @@
         <div class="rental-box-dash">
             <div class="rent-box-dash">
                 <div class="rent-box-info">
+                    <p class="info-stroj">Indianin 104</p>
+                    <p class="info-imie">Tomasz Pekasz</p>
+                    <p>Zapłacone</p>
+                    <p>09.06.2022</p>
+                    <button class="button">Confirm</button>
+                </div>
+            </div>
+            <div class="rent-box-dash">
+                <div class="rent-box-info">
                 <p>Indianin 104</p>
                 <p>Tomasz Pekasz</p>
                 <p>Zapłacone</p>
-                </div>
-                <div class="rent-box-info">
                 <p>termin wypożyczenia</p>
-                <button>Confirm</button>
+                <button class="button">Confirm</button>
                 </div>
-            </div>
-            <div class="rent-box-dash">
-                <p>Strój</p>
-                <p>Imie nazwisko</p>
-                <p>zapłacone?</p>
-                <p>termin wypożyczenia</p>
-                <button>Confirm</button>
-            </div>
-        </div>
-        <h2>Most Popular Costumes</h2>
-        <div class="rental-box-dash">
-            <div class="rent-box-dash">
-
             </div>
         </div>
     </div>
