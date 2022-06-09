@@ -46,27 +46,55 @@
                 <p><?php echo $rowoverdue; ?> Rents</p>
             </div>
         </div>
-        <h2 class="rental-box-h2">Upcoming Rentals</h2>
-        <div class="rental-box-dash">
-            <div class="rent-box-dash">
-                <div class="rent-box-info">
-                    <p class="info-stroj">Indianin 104</p>
-                    <p class="info-imie">Tomasz Pekasz</p>
-                    <p>Zapłacone</p>
-                    <p>09.06.2022</p>
-                    <button class="button">Confirm</button>
+        <div class="dash-row">
+            <div class="dash-column">
+                <h2 class="rental-box-h2">Upcoming Rentals</h2>
+                <div class="rental-box-dash">
+                    <div class="rent-box-dash">
+                        <div class="rent-box-info">
+                            <p class="info-stroj">Indianin 104</p>
+                            <p class="info-imie">Tomasz Pekasz</p>
+                            <p>Zapłacone</p>
+                            <p>09.06.2022</p>
+                            <button class="button">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="rent-box-dash">
+                        <div class="rent-box-info">
+                        <p>Indianin 104</p>
+                        <p>Tomasz Pekasz</p>
+                        <p>Zapłacone</p>
+                        <p>09.05.2022</p>
+                        <button class="button">Confirm</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="rent-box-dash">
-                <div class="rent-box-info">
-                <p>Indianin 104</p>
-                <p>Tomasz Pekasz</p>
-                <p>Zapłacone</p>
-                <p>termin wypożyczenia</p>
-                <button class="button">Confirm</button>
+            <div class="dash-column">
+                <h2 class="rental-box-h2">Upcoming Rentals</h2>
+                <div class="rental-box-dash">
+                    <div class="rent-box-dash">
+                        <div class="rent-box-info">
+                            <p class="info-stroj">Indianin 104</p>
+                            <p class="info-imie">Tomasz Pekasz</p>
+                            <p>Zapłacone</p>
+                            <p>09.06.2022</p>
+                            <button class="button">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="rent-box-dash">
+                        <div class="rent-box-info">
+                        <p>Indianin 104</p>
+                        <p>Tomasz Pekasz</p>
+                        <p>Zapłacone</p>
+                        <p>09.05.2022</p>
+                        <button class="button">Confirm</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
