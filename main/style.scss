@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #DED2A8;
+    .info-bar {
+        width: 100vw;
+        padding: 15px;
+        background-color: #699E3c;
+        text-align: center;
+        color: white;
+    }
+    .contact {
+        margin: 0;
+        padding: 4px;
+        ul {
+            width: 90vw;
+            display: flex;
+            flex-wrap: none;
+            justify-content: space-around;
+            list-style: none;
+        }
+    }
+    nav {
+        width: 90vw;
+        padding: 2px;
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            list-style: none;
+        }
+    }
+}
+
+.header {
+    display: block;
+    background-image: url('../img/main/header.jpg') no-repeat 50% 50%;
+    background-size: auto;
+    height: 40vw;
+    width: 100vw;
+    padding: 50px;
+}
+
+.image-row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .box {
+        display: block;
+        width: 40vw;
+        height: 20vw;
+        margin: 10px;
+        h2 {
+            padding-top: 14vw;
+        }
+    }
+    .men {
+        background-image: url('../img/main/pop-men.jpg');
+        background-size: cover;
+    }
+    .woman {
+        background-image: url('../img/main/pop-womens.jpg');
+        background-size: cover;
+    }
+    .boy {
+        background-image: url('../img/main/pop-boys.jpg');
+        background-size: cover;
+    }
+    .girl {
+        background-image: url('../img/main/pop-girls.jpg');
+        background-size: cover;
+    }
+}

@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #DED2A8;
+}
+
+header .info-bar {
+  width: 100vw;
+  padding: 15px;
+  background-color: #699E3c;
+  text-align: center;
+  color: white;
+}
+
+header .contact {
+  margin: 0;
+  padding: 4px;
+}
+
+header .contact ul {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+header nav {
+  width: 90vw;
+  padding: 2px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.header {
+  display: block;
+  background-image: url("../img/main/header.jpg") no-repeat 50% 50%;
+  background-size: auto;
+  height: 40vw;
+  width: 100vw;
+  padding: 50px;
+}
+
+.image-row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.image-row a {
+  text-decoration: none;
+  color: white;
+}
+
+.image-row .box {
+  display: block;
+  width: 40vw;
+  height: 20vw;
+  margin: 10px;
+}
+
+.image-row .box h2 {
+  padding-top: 14vw;
+}
+
+.image-row .men {
+  background-image: url("../img/main/pop-men.jpg");
+  background-size: cover;
+}
+
+.image-row .woman {
+  background-image: url("../img/main/pop-womens.jpg");
+  background-size: cover;
+}
+
+.image-row .boy {
+  background-image: url("../img/main/pop-boys.jpg");
+  background-size: cover;
+}
+
+.image-row .girl {
+  background-image: url("../img/main/pop-girls.jpg");
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */
