@@ -1,11 +1,12 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #DED2A8;
     .info-bar {
-        width: 100vw;
+        width: 100%;
         padding: 15px;
         background-color: #699E3c;
         text-align: center;
@@ -35,12 +36,17 @@ header {
 }
 
 .header {
-    display: block;
-    background-image: url('../img/main/header.jpg') no-repeat 50% 50%;
-    background-size: auto;
     height: 40vw;
     width: 100vw;
     padding: 50px;
+    background-image: url('../img/main/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .header-text {
+        padding-top: 20vw;
+    }
 }
 
 .image-row {
