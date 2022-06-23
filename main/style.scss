@@ -99,3 +99,20 @@ header {
         background-size: cover;
     }
 }
+.product_list{
+    display: flex;
+    flex-wrap: wrap;
+    .product_box{
+        margin: 40px;
+        width: 200px;
+        border-radius: 15px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}

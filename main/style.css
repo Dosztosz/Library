@@ -134,4 +134,32 @@ header nav ul {
   background-image: url("../img/main/pop-girls.jpg");
   background-size: cover;
 }
+
+.product_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product_list .product_box {
+  margin: 40px;
+  width: 200px;
+  border-radius: 15px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.product_list .product_box img {
+  height: 200px;
+  width: 200px;
+}
 /*# sourceMappingURL=style.css.map */
