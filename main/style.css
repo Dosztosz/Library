@@ -135,6 +135,42 @@ header nav ul {
   background-size: cover;
 }
 
+.prod_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 50px;
+}
+
+.prod_header .prod_text {
+  margin-top: 100px;
+  margin-left: 100px;
+  background-color: #f7f7f7;
+}
+
+.prod_header .prod_text .prod_description {
+  margin-top: 50px;
+  width: 500px;
+}
+
+.prod_header .prod_text .prod_description ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.prod_header .prod_text .prod_description li {
+  list-style: none;
+}
+
+.prod_header .prod_photo {
+  margin-right: 100px;
+}
+
 .product_list {
   display: -webkit-box;
   display: -ms-flexbox;

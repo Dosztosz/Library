@@ -99,6 +99,31 @@ header {
         background-size: cover;
     }
 }
+.prod_header{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 50px;
+    .prod_text{
+        margin-top: 100px;
+        margin-left: 100px;
+        background-color: rgb(247, 247, 247);
+        .prod_description{
+            margin-top: 50px;
+            width: 500px;
+
+            ul {
+                display:flex;
+                justify-content: space-around;
+            }
+            li{
+                list-style: none;
+            }
+        }
+    }
+    .prod_photo{
+        margin-right: 100px;
+    }
+}
 .product_list{
     display: flex;
     flex-wrap: wrap;
