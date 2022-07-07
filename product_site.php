@@ -6,24 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main/style.css">
-    <title>Main Page</title>
+    <title>Dosztosz list</title>
 </head>
 
 <body>
     <div>
-        <header>
-            <div class="info-bar">Bochnia 32-700 ul. Józefa Romana 25</div>
-            <div class="logo"><img src="log.png"><p>+48 506 409 529</p></div>
-            <nav>
-                <ul>
-                    <li>Dla mężczyzn</li>
-                    <li>Dla Kobiet</li>
-                    <li>Dla Dziewczynek</li>
-                    <li>Dla Chłopców</li>
-                    <li>Cosplay</li>
-                </ul>
-            </nav>
-        </header>
+        <?php include ('../main/header.php') ?>
         <div>
             <div class="prod_header">
                 <div class="prod_photo">

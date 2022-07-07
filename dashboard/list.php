@@ -40,7 +40,7 @@
                     echo '<div class="kafelki">';
                     while($row = $results->fetch_assoc()) {
                             echo '<div class="kafelek">
-                            <img src="img/'.$row['img'].'">
+                            <img src="../img/'.$row['img'].'">
                             <p class="numer">'.$row['number'].'</p>
                             <p>'.$row['name_costume'].'</p>
                             <p>'.$row['size'].' / '.$row['price'].'</p>

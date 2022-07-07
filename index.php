@@ -1,43 +1,49 @@
-<?php
-include ('includes/config.php');
-session_start();
-	
-	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
-	{
-		header('Location: home.php');
-		exit();
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles/login.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Logowania</title>
-</head>
+
+<?php include ('main/head.php') ?>
 <body>
-<div class="container">
-    <div class="logo">Rent a costume</div>
-    <div class="login-item">
-      <form action="login.php" method="post" class="form form-login">
-        <div class="form-field">
-          <label class="user" for="login-username"><span class="hidden">Login</span></label>
-          <input name="login" id="login-username" type="text" class="form-input" placeholder="Username" required>
+    <div>
+        <?php include ('main/header.php') ?>
+        <div>
+            <div class="header">
+                <div class="menu">
+                    <ul>
+                        <li><a href="lista.php">Dla Dziewczynek</a></li>
+                        <li><a href="lista.php">Dla Chłopców</a></li>
+                        <li><a href="lista.php">Dla Mężczyzn</a></li>
+                        <li><a href="lista.php">Dla Kobiet</a></li>
+                        <li><a href="lista.php">Akcesoria</a></li>
+                        <li><a href="lista.php">Cosplay</a></li>
+                    </ul>
+                </div>
+                <div class="slider">
+                    <img src="slider.png" alt="">
+                </div>
+            </div>
+            <div class="image-row" alt="wyświetla liste">
+                <a href="lista.php">
+                    <div class="box men">
+                        <h2>Mężczyźni</h2>
+                    </div>
+                </a>
+                <a href="lista.php">
+                    <div class="box woman">
+                        <h2>Kobiety</h2>
+                    </div>
+                </a>
+                <a href="lista.php">
+                    <div class="box boy">
+                        <h2>Chłopcy</h2>
+                    </div>
+                </a>
+                <a href="lista.php">
+                    <div class="box girl">
+                        <h2>Dziewczynki</h2>
+                    </div>
+                </a>
+            </div>
         </div>
-
-        <div class="form-field">
-          <label class="lock" for="login-password"><span class="hidden">Hasło</span></label>
-          <input name="password" id="login-password" type="password" class="form-input" placeholder="Password" required>
-        </div>
-
-        <div class="form-field">
-          <input type="submit" value="Log in">
-        </div>
-      </form>
     </div>
-</div>
 </body>
 </html>

@@ -36,20 +36,25 @@
     <?php include('includes/header.php') ?>
     <div class="content">
         <?php include('includes/navbar-top.php') ?>
-        <h1 class="rental-box-h2">Rental Dashboard</h1>
+        <h1 class="rental-box-h2">Rental Products</h1>
         <div class="widgets">
+            <a href="rent.php">
+                <div class="widgets-block">
+                <h2>Rent a product</h2>
+                </div>
+            </a>
+            <a href="overdue.php">
             <div class="widgets-block">
-                <h2>Total orders</h2>
-                <p><?php echo $rowcount; ?> Rents</p>
+                <h2>Overdue Rentals</h2>
+                <p><?php echo $rowoverdue; ?> Rentals</p>
             </div>
+            </a>
+            <a href="list.php">
             <div class="widgets-block">
-                <h2>Overdue orders</h2>
-                <p><?php echo $rowoverdue; ?> Rents</p>
+                <h2>All available costumes</h2>
+                <p><?php echo $rowoverdue; ?> Costumes</p>
             </div>
-            <div class="widgets-block">
-                <h2>Overdue orders</h2>
-                <p><?php echo $rowoverdue; ?> Rents</p>
-            </div>
+            </a>
         </div>
         <div class="dash-row">
             <div class="dash-column">

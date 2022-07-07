@@ -175,12 +175,22 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product_list .product_box {
-  margin: 40px;
+  margin: 8px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(15% - 8px);
+          flex: 0 1 calc(15% - 8px);
+  /* <-- adjusting for margin */
   width: 200px;
   border-radius: 15px;
   border: 1px solid black;
@@ -195,7 +205,9 @@ header nav ul {
 }
 
 .product_list .product_box img {
-  height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=style.css.map */

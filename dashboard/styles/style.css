@@ -144,6 +144,11 @@ body {
   color: aqua;
 }
 
+.content a {
+  text-decoration: none;
+  color: black;
+}
+
 .content .widgets {
   padding-left: 200px;
   display: -webkit-box;
