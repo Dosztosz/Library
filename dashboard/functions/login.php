@@ -29,23 +29,23 @@ if ($conn->connect_error) {
       if($ilu_userow>0)
 			{
 				$_SESSION['zalogowany'] = true;
-        $logged_in_user = mysqli_fetch_assoc($results);
+        $logged_in_user = mysqli_fetch_assoc($result);
         if ($logged_in_user['power'] == 3) {
 
           $_SESSION['user'] = $logged_in_user;
           $_SESSION['success']  = "You are now logged in";
-          header('location: dashboard/home.php');		  
+          header('location: ../home.php');		  
         }
         else{
           $_SESSION['user'] = $logged_in_user;
           $_SESSION['success']  = "You are now logged in";
   
-          header('location: index.php');
+          header('location: ../../index.php');
         }
 				$wiersz = $result->fetch_assoc();
 				unset($_SESSION['blad']);
 				$result->free_result();
-				header('Location: home.php');
+				header('Location: ../home.php');
 			} 
       else 
       {

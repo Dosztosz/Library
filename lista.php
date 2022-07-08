@@ -24,7 +24,17 @@ $results = $conn->query($sql);
 <body>
     <div>
         <?php include ('main/header.php') ?>
-        <div>
+        <div class="list-container">
+            <div class="menu">
+                <ul>
+                    <li><a href="lista.php">Dla Dziewczynek</a></li>
+                    <li><a href="lista.php">Dla Chłopców</a></li>
+                    <li><a href="lista.php">Dla Mężczyzn</a></li>
+                    <li><a href="lista.php">Dla Kobiet</a></li>
+                    <li><a href="lista.php">Akcesoria</a></li>
+                    <li><a href="lista.php">Cosplay</a></li>
+                </ul>
+            </div>
             <div class="product_list">
                 <?php
                     if($results->num_rows>0){
