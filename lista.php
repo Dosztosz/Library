@@ -27,14 +27,12 @@ $results = $conn->query($sql);
         <div class="list-container">
             <div class="menu">
                 <ul>
-                    <li><a href="lista.php">Dla Dziewczynek</a></li>
-                    <li><a href="lista.php">Dla Chłopców</a></li>
+                    <li><a href="lista.php">Kategoria Stroju</a></li>
+                    <li><a href="lista.php">Rozmiar</a></li>
                     <li><a href="lista.php">Dla Mężczyzn</a></li>
-                    <li><a href="lista.php">Dla Kobiet</a></li>
-                    <li><a href="lista.php">Akcesoria</a></li>
-                    <li><a href="lista.php">Cosplay</a></li>
                 </ul>
             </div>
+        </div>
             <div class="product_list">
                 <?php
                     if($results->num_rows>0){
@@ -51,7 +49,6 @@ $results = $conn->query($sql);
                         }
                 ?>
             </div>
-        </div>
     </div>
 </body>
 
