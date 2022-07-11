@@ -1,15 +1,8 @@
 <?php
-include ('functions/session.php');
+include ('include.php');
 $site_title = "Rent a costume";
-    require_once ('includes/config.php');
-
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-
-    $sql = "SELECT * FROM costumes WHERE `quantity` > 0";
-    $results = $conn->query($sql);
+$sql = "SELECT * FROM costumes WHERE `quantity` > 0";
+$results = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">

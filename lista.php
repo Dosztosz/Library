@@ -1,12 +1,7 @@
 <?php
-include ('dashboard/functions/session.php');
-require_once ('dashboard/includes/config.php');
+include ('dashboard/functions/connect_public.php');
 $site_title = "Products";
 $sql = "SELECT * FROM costumes";
-$conn = new mysqli($servername, $username, $password, $db_name);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
 $results = $conn->query($sql);
 
 ?>

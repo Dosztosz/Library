@@ -1,5 +1,5 @@
 <?php
-require_once ('../includes/config.php');
+require_once ('connect.php');
 session_start();
 	
 	if ((!isset($_POST['login'])) || (!isset($_POST['password'])))
@@ -8,9 +8,6 @@ session_start();
 		exit();
 	}
 
-// create connection
-
-$conn = new mysqli($servername, $username, $password, $db_name);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

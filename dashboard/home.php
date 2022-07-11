@@ -1,7 +1,6 @@
 <?php
-    include ('functions/session.php');
-    include ('functions/connect.php');
-    include ('functions/check_overdue.php');
+    include ('include.php');
+    include ('includes/check_overdue.php');
     $site_title = "Dashboard";
     $sql = "SELECT * FROM rentals WHERE `status` = 'overdue'";
     $results = $conn->query($sql);
