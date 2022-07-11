@@ -1,22 +1,12 @@
 <?php
     include ('functions/session.php');
-    require_once ('includes/config.php');
-    $site_title = "Dashboard";
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    $conn->set_charset("utf8");
-    if($conn->connect_error){
-        die("connection_failed: " . $conn->connect_error);
-    }
+    include ('functions/connect.php');
     include ('functions/check_overdue.php');
-    $sql = "SELECT * FROM rentals";
-    $sql_next = "SELECT * FROM rentals WHERE `status` = 'overdue'";
+    $site_title = "Dashboard";
+    $sql = "SELECT * FROM rentals WHERE `status` = 'overdue'";
     $results = $conn->query($sql);
 
     if ($result = mysqli_query($conn, $sql)) {
-        // Return the number of rows in result set
-        $rowcount = mysqli_num_rows($result);
-    }
-    if ($result = mysqli_query($conn, $sql_next)) {
         $rowoverdue = mysqli_num_rows($result);
     }
 ?>
@@ -40,7 +30,7 @@
         <div class="widgets">
             <a href="rent.php">
                 <div class="widgets-block">
-                <h2>Rent a product</h2>
+                    <h2>Rent a product</h2>
                 </div>
             </a>
             <a href="overdue.php">

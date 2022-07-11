@@ -45,6 +45,7 @@
                             <p>'.$row['name_costume'].'</p>
                             <p>'.$row['size'].' / '.$row['price'].'</p>
                             <p>'.$row['quantity'].'</p>
+                            <p><a href="product.php?productId='.$row['id'].'">Manage</a></p>
                             </div>';
                     }
                     echo '</div>';

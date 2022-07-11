@@ -1,19 +1,10 @@
 <?php
-    session_start();
-        
-    if (!isset($_SESSION['zalogowany']))
-    {
-        header('Location: index.php');
-        exit();
-    }
-    require_once ('../includes/config.php');
+include ('session.php');
+include ('connect.php');
 
     $id = $_GET['id'];
     $status = $_GET['status'];
     $costume_id = $_GET['product'];
-
-    $conn = new mysqli ($servername, $username, $password, $db_name);
-    $conn->set_charset("utf8");
     if($conn->connect_error){
         die("connection error: " . $conn->connect_error);
     }
