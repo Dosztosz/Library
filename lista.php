@@ -25,7 +25,7 @@ $results = $conn->query($sql);
     <div>
         <?php include ('main/header.php') ?>
         <div class="list-container">
-            <div class="menu">
+            <div class="filters">
                 <ul>
                     <li><a href="lista.php">Kategoria Stroju</a></li>
                     <li><a href="lista.php">Rozmiar</a></li>
@@ -35,18 +35,18 @@ $results = $conn->query($sql);
         </div>
             <div class="product_list">
                 <?php
-                    if($results->num_rows>0){
-                        while($row = $results->fetch_assoc()) {
-                            echo '<div class="product_box">
-                                    <img src="img/'.$row['img'].'">
-                                    <p class="numer">'.$row['number'].'</p>
-                                    <p>'.$row['name_costume'].'</p>
-                                    <p>'.$row['size'].' / '.$row['price'].'</p>
-                                    <p>'.$row['quantity'].'</p>
-                                    <button>Sprawdź</button>
-                                    </div>';
+                if($results->num_rows>0){
+                    while($row = $results->fetch_assoc()) {
+                    echo '<div class="product_box">
+                    <img src="img/'.$row['img'].'">
+                    <p class="numer">'.$row['number'].'</p>
+                    <p>'.$row['name_costume'].'</p>
+                    <p>'.$row['size'].' / '.$row['price'].'</p>
+                    <p>'.$row['quantity'].'</p>
+                    <button>Sprawdź</button>
+                    </div>';
                     }
-                        }
+                }
                 ?>
             </div>
     </div>
