@@ -1,12 +1,8 @@
 <?php
-    include ('functions/session.php');
-    require_once ('includes/config.php');
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
     $site_title = "Products";
-
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
 
     $sql = "SELECT * FROM costumes";
     $sqlimage = "SELECT * FROM costumes";

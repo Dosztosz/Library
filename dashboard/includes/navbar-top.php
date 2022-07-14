@@ -3,6 +3,6 @@
         <li><img src=""></li>
         <li>Welcome Tomasz Dębosz</li>
         <li>Edit</li>
-        <li><a href="../functions/logout.php">Logout</a></li>
+        <a href="logout.php" class="bar-item"><span class="mobile">Logout</a>
     </ul>
 </div>

@@ -1,5 +1,7 @@
 <?php
-include ('include.php');
+include ('../database/session_admin.php');
+require_once ('../database/config.php');
+require_once ('../database/connect.php');
 $site_title = "Rent a costume";
 $sql = "SELECT * FROM costumes WHERE `quantity` > 0";
 $results = $conn->query($sql);

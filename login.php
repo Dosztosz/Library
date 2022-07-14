@@ -1,5 +1,6 @@
 <?php
-include ('dashboard/includes/config.php');
+include ('database/config.php');
+include ('database/connect.php');
 session_start();
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
@@ -22,7 +23,7 @@ session_start();
 <div class="container">
     <div class="logo">Rent a costume</div>
     <div class="login-item">
-      <form action="dashboard/functions/login.php" method="post" class="form form-login">
+      <form action="database/login.php" method="post" class="form form-login">
         <div class="form-field">
           <label class="user" for="login-username"><span class="hidden">Login</span></label>
           <input name="login" id="login-username" type="text" class="form-input" placeholder="Username" required>

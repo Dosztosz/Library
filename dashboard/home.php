@@ -1,13 +1,9 @@
 <?php
-    include ('include.php');
-    include ('includes/check_overdue.php');
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
     $site_title = "Dashboard";
     $sql = "SELECT * FROM rentals WHERE `status` = 'overdue'";
-    $results = $conn->query($sql);
-
-    if ($result = mysqli_query($conn, $sql)) {
-        $rowoverdue = mysqli_num_rows($result);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,13 +31,13 @@
             <a href="overdue.php">
             <div class="widgets-block">
                 <h2>Overdue Rentals</h2>
-                <p><?php echo $rowoverdue; ?> Rentals</p>
+                <p> Rentals</p>
             </div>
             </a>
             <a href="list.php">
             <div class="widgets-block">
                 <h2>All available costumes</h2>
-                <p><?php echo $rowoverdue; ?> Costumes</p>
+                <p> Costumes</p>
             </div>
             </a>
         </div>

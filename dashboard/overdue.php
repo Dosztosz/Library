@@ -1,6 +1,7 @@
 <?php
-    /*  Adding necessary Files to connect to database */
-    include ('include.php');
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
 	$site_title = "Overdue Orders";
     /*  Composing The SQL for picking data from different tables */
     $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, costumes.id_product, rentals.price, rentals.phone, rentals.address, costumes.name_costume, costumes.size, rentals.status  

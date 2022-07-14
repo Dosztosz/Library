@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include ('main/head.php') ?>
+<?php session_start(); 
+include ('main/head.php') ?>
 <body>
     <div>
         <?php include ('main/header.php') ?>

@@ -1,4 +1,5 @@
 <?php
+require_once ('config.php');
 require_once ('connect.php');
 session_start();
 	
@@ -30,19 +31,16 @@ if ($conn->connect_error) {
         if ($logged_in_user['power'] == 3) {
 
           $_SESSION['user'] = $logged_in_user;
+          $_SESSION['admin'] = true;
           $_SESSION['success']  = "You are now logged in";
-          header('location: ../home.php');		  
+          header('location: ../dashboard/home.php');		  
         }
         else{
           $_SESSION['user'] = $logged_in_user;
           $_SESSION['success']  = "You are now logged in";
-  
-          header('location: ../../index.php');
+          $_SESSION['admin'] = false;
+          header('location: ../index.php');
         }
-				$wiersz = $result->fetch_assoc();
-				unset($_SESSION['blad']);
-				$result->free_result();
-				header('Location: ../home.php');
 			} 
       else 
       {
