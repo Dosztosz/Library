@@ -1,13 +1,9 @@
 <?php
-    include ('functions/session.php');
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
 	$site_title = "Overdue Orders";
-    require_once ('includes/config.php');
-
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    $conn->set_charset("utf8");
-    if($conn->connect_error) {
-        die("connection_failed: " . $conn->connect_error);
-    }
+    /*  Composing The SQL for picking data from different tables */
     $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, costumes.id_product, rentals.price, rentals.phone, rentals.address, costumes.name_costume, costumes.size, rentals.status  
     FROM rentals 
     INNER JOIN costumes 
@@ -40,7 +36,9 @@
                     <th>Confirm return</th>
                     <th>Edit</th>
                 </thead>
+                
                 <?php
+                /*Creating a list of overdue orders*/
                     if($results->num_rows>0) {
                         while($row = $results->fetch_assoc()) {
                             if ($row['status'] == "overdue"){

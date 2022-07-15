@@ -1,5 +1,6 @@
 <?php
-require_once ('includes/config.php');
+require_once ('config.php');
+require_once ('connect.php');
 session_start();
 	
 	if ((!isset($_POST['login'])) || (!isset($_POST['password'])))
@@ -8,9 +9,6 @@ session_start();
 		exit();
 	}
 
-// create connection
-
-$conn = new mysqli($servername, $username, $password, $db_name);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -29,23 +27,20 @@ if ($conn->connect_error) {
       if($ilu_userow>0)
 			{
 				$_SESSION['zalogowany'] = true;
-        $logged_in_user = mysqli_fetch_assoc($results);
+        $logged_in_user = mysqli_fetch_assoc($result);
         if ($logged_in_user['power'] == 3) {
 
           $_SESSION['user'] = $logged_in_user;
+          $_SESSION['admin'] = true;
           $_SESSION['success']  = "You are now logged in";
-          header('location: dashboard/home.php');		  
+          header('location: ../dashboard/home.php');		  
         }
         else{
           $_SESSION['user'] = $logged_in_user;
           $_SESSION['success']  = "You are now logged in";
-  
-          header('location: index.php');
+          $_SESSION['admin'] = false;
+          header('location: ../index.php');
         }
-				$wiersz = $result->fetch_assoc();
-				unset($_SESSION['blad']);
-				$result->free_result();
-				header('Location: home.php');
 			} 
       else 
       {

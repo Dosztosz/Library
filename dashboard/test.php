@@ -1,4 +1,7 @@
 <?php
+   include ('../database/session_admin.php');
+   require_once ('../database/config.php');
+   require_once ('../database/connect.php');
    if(isset($_FILES['image'])){
       $errors= array();
       $file_name = $_FILES['image']['name'];

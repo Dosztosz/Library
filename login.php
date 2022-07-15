@@ -1,5 +1,6 @@
 <?php
-include ('includes/config.php');
+include ('database/config.php');
+include ('database/connect.php');
 session_start();
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
@@ -14,7 +15,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="dashboard/styles/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Logowania</title>
 </head>
@@ -22,7 +23,7 @@ session_start();
 <div class="container">
     <div class="logo">Rent a costume</div>
     <div class="login-item">
-      <form action="dashboard/functions/login.php" method="post" class="form form-login">
+      <form action="database/login.php" method="post" class="form form-login">
         <div class="form-field">
           <label class="user" for="login-username"><span class="hidden">Login</span></label>
           <input name="login" id="login-username" type="text" class="form-input" placeholder="Username" required>

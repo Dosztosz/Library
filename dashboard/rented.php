@@ -1,12 +1,8 @@
 <?php
     $site_title="Rented Books";
-    include ('functions/session.php');
-    require_once ('includes/config.php');
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    $conn->set_charset("utf8");
-    if($conn->connect_error) {
-        die("connection_failed: " . $conn->connect_error);
-    }
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
     $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.id_product, costumes.name_costume, costumes.size, rentals.status  
     FROM rentals 
     INNER JOIN costumes 

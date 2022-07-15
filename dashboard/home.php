@@ -1,24 +1,9 @@
 <?php
-    include ('functions/session.php');
-    require_once ('includes/config.php');
+    include ('../database/session_admin.php');
+    require_once ('../database/config.php');
+    require_once ('../database/connect.php');
     $site_title = "Dashboard";
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    $conn->set_charset("utf8");
-    if($conn->connect_error){
-        die("connection_failed: " . $conn->connect_error);
-    }
-    include ('functions/check_overdue.php');
-    $sql = "SELECT * FROM rentals";
-    $sql_next = "SELECT * FROM rentals WHERE `status` = 'overdue'";
-    $results = $conn->query($sql);
-
-    if ($result = mysqli_query($conn, $sql)) {
-        // Return the number of rows in result set
-        $rowcount = mysqli_num_rows($result);
-    }
-    if ($result = mysqli_query($conn, $sql_next)) {
-        $rowoverdue = mysqli_num_rows($result);
-    }
+    $sql = "SELECT * FROM rentals WHERE `status` = 'overdue'";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,19 +25,19 @@
         <div class="widgets">
             <a href="rent.php">
                 <div class="widgets-block">
-                <h2>Rent a product</h2>
+                    <h2>Rent a product</h2>
                 </div>
             </a>
             <a href="overdue.php">
             <div class="widgets-block">
                 <h2>Overdue Rentals</h2>
-                <p><?php echo $rowoverdue; ?> Rentals</p>
+                <p> Rentals</p>
             </div>
             </a>
             <a href="list.php">
             <div class="widgets-block">
                 <h2>All available costumes</h2>
-                <p><?php echo $rowoverdue; ?> Costumes</p>
+                <p> Costumes</p>
             </div>
             </a>
         </div>

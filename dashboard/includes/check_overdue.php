@@ -1,11 +1,4 @@
 <?php
-require_once ('includes/config.php');
-
-$conn = new mysqli($servername, $username, $password, $db_name);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
     $sql = "SELECT * FROM rentals";
     $results = $conn->query($sql);
     $today = new DateTime(date("Y-m-d"));

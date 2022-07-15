@@ -1,12 +1,7 @@
 <?php
-include ('dashboard/functions/session.php');
-require_once ('dashboard/includes/config.php');
+include ('dashboard/functions/connect_public.php');
 $site_title = "Products";
 $sql = "SELECT * FROM costumes";
-$conn = new mysqli($servername, $username, $password, $db_name);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
 $results = $conn->query($sql);
 
 ?>
@@ -24,24 +19,31 @@ $results = $conn->query($sql);
 <body>
     <div>
         <?php include ('main/header.php') ?>
-        <div>
-            <div class="product_list">
-                <?php
-                    if($results->num_rows>0){
-                        while($row = $results->fetch_assoc()) {
-                            echo '<div class="product_box">
-                                    <img src="img/'.$row['img'].'">
-                                    <p class="numer">'.$row['number'].'</p>
-                                    <p>'.$row['name_costume'].'</p>
-                                    <p>'.$row['size'].' / '.$row['price'].'</p>
-                                    <p>'.$row['quantity'].'</p>
-                                    <button>Sprawdź</button>
-                                    </div>';
-                    }
-                        }
-                ?>
+        <div class="list-container">
+            <div class="filters">
+                <ul>
+                    <li><a href="lista.php">Kategoria Stroju</a></li>
+                    <li><a href="lista.php">Rozmiar</a></li>
+                    <li><a href="lista.php">Dla Mężczyzn</a></li>
+                </ul>
             </div>
         </div>
+            <div class="product_list">
+                <?php
+                if($results->num_rows>0){
+                    while($row = $results->fetch_assoc()) {
+                    echo '<div class="product_box">
+                    <img src="img/'.$row['img'].'">
+                    <p class="numer">'.$row['number'].'</p>
+                    <p>'.$row['name_costume'].'</p>
+                    <p>'.$row['size'].' / '.$row['price'].'</p>
+                    <p>'.$row['quantity'].'</p>
+                    <button>Sprawdź</button>
+                    </div>';
+                    }
+                }
+                ?>
+            </div>
     </div>
 </body>
 
