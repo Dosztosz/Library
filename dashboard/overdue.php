@@ -52,8 +52,7 @@
                                 <td>'.$row['phone'].'</td>
                                 <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['id_product'].'">Confirm</a></td>
                                 <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
-                            </tr>
-                            ';
+                            </tr>';
                             }
                         }
                     }
@@ -61,8 +60,6 @@
 
             </table>
         </div>
-    </div>
-
     </div>
 </body>
 
