@@ -41,7 +41,7 @@ if ($conn->connect_error) {
           $_SESSION['admin'] = false;
           header('location: ../index.php');
         }
-			} 
+			}
       else 
       {
 				$_SESSION['blad'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';

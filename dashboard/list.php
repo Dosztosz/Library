@@ -3,13 +3,11 @@
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
     $site_title = "Products";
-
     $sql = "SELECT * FROM costumes";
     $sqlimage = "SELECT * FROM costumes";
     $results = $conn->query($sql);
     $result = $conn->query($sqlimage);
     $sqle = "SELECT * FROM category";
-    $kafelki = $_GET['kafelki'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,14 +23,14 @@
         <div class="list">
             <div class="menu">
                 <h1><?php echo $site_title; ?></h1>
-                <a href="?kafelki=0"><i class="fa-solid fa-list lista"></i></a>
-                <a href="?kafelki=1"><i class="fa-solid fa-image lista"></i></a>
+                <a href="list.php"><i class="bi bi-card-list"></i></a>
+                <a href="?kafelki=1"><i class="bi bi-card-image"></i></a>
 
                 <a href="add_costume.php">Dodaj Strój</a>
             </div>
             <?php
             if($results->num_rows>0){
-                if($kafelki == 1){
+                if(isset($_GET['kafelki'])){
                     echo '<div class="kafelki">';
                     while($row = $results->fetch_assoc()) {
                             echo '<div class="kafelek">
