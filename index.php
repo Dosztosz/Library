@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php session_start(); 
-include ('main/head.php') ?>
+<?php 
+include ('functions_main.php');
+session_start();
+get_head();
+
+ ?>
 <body>
     <div>
-        <?php include ('main/header.php') ?>
+        <?php
+        get_admin_header();
+        get_header(); 
+        ?>
         <div>
             <div class="header">
                 <div class="menu">

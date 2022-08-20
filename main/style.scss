@@ -134,9 +134,7 @@ header {
     }
 }
 
-<<<<<<< HEAD
-.product_list {
-=======
+/* head */
 .list-container{
     display: flex;
     justify-content: center;
@@ -158,7 +156,6 @@ header {
     }
 }
 .product_list{
->>>>>>> 511dfca9825cd710310b4ff02edfc2eebcab4e61
     display: flex;
     flex-flow: row wrap;
     position: relative;
@@ -179,20 +176,18 @@ header {
             object-fit: contain
         }
     }
-<<<<<<< HEAD
-=======
 }
-.navbar-top {
+.navbar-admin {
     width: 100%;
-    height: 60px;
+    height: 2rem;
     ul {
         display: flex;
         justify-content: space-between;
         float: right;
     }
     li {
+        margin: 0;
         margin-right: 20px;
         list-style: none;
     }
->>>>>>> 511dfca9825cd710310b4ff02edfc2eebcab4e61
 }

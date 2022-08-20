@@ -1,5 +1,9 @@
 <?php
-include ('dashboard/functions/connect_public.php');
+include ('functions_main.php');
+include ('database/config.php');
+include ('database/connect.php');
+session_start(); 
+get_head();
 $site_title = "Products";
 $sql = "SELECT * FROM costumes";
 $results = $conn->query($sql);
@@ -8,17 +12,14 @@ $results = $conn->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main/style.css">
-    <title>Dosztosz List</title>
-</head>
+<?php get_head(); ?>
 
 <body>
     <div>
-        <?php include ('main/header.php') ?>
+        <?php 
+        get_admin_header();
+        get_header(); 
+        ?>
         <div class="list-container">
             <div class="filters">
                 <ul>
