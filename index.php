@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php 
+include ('database/config.php');
 include ('functions_main.php');
 session_start();
 get_head();
@@ -15,19 +16,7 @@ get_head();
         ?>
         <div>
             <div class="header">
-                <div class="menu">
-                    <ul>
-                        <li><a href="lista.php">Dla Dziewczynek</a></li>
-                        <li><a href="lista.php">Dla Chłopców</a></li>
-                        <li><a href="lista.php">Dla Mężczyzn</a></li>
-                        <li><a href="lista.php">Dla Kobiet</a></li>
-                        <li><a href="lista.php">Akcesoria</a></li>
-                        <li><a href="lista.php">Cosplay</a></li>
-                    </ul>
-                </div>
-                <div class="slider">
-                    <img src="slider.png" alt="">
-                </div>
+                <img src="img/banner.jpg" class="bg" alt="">
             </div>
             <div class="image-row" alt="wyświetla liste">
                 <a href="lista.php">
@@ -53,5 +42,6 @@ get_head();
             </div>
         </div>
     </div>
+    <?php get_footer()?>
 </body>
 </html>

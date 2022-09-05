@@ -1,3 +1,6 @@
+$main: #0083c4;
+$secondary: #008acf;
+
 body {
     margin: 0;
     overflow-x: hidden;
@@ -13,11 +16,11 @@ a {
 }
 
 header {
-    background-color: #0083c4;
+    background-color: $main;
     .info-bar {
         width: 100%;
         padding: 5px;
-        background-color: #008acf;
+        background-color: $secondary;
         text-align: center;
         color: white;
     }
@@ -50,25 +53,16 @@ header {
     }
 }
 
-.header {
+.header{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    margin: 50px;
-    .menu {
-        margin-right: 100px;
-        
-        border-radius: 15px;
-        border: 1px solid rgb(204, 204, 204);
-        ul {
-            list-style: none;
-            align-content: left;
-            li {
-                padding: 20px;
-                border-bottom: 1px solid rgb(204, 204, 204);
-            }
-        }
-    }
+    margin: 10px;
+}
+.bg {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    z-index: 0;
 }
 
 .image-row {
@@ -189,5 +183,33 @@ header {
         margin: 0;
         margin-right: 20px;
         list-style: none;
+    }
+}
+
+.footer{
+    .container_flex{
+        color: white;
+            padding: 2vw;
+            margin-top: 2vw;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            background-color: $secondary;
+            display: flex;
+            justify-content: space-around;
+            padding-right: 10vw;
+            padding-left: 10vw;
+        .row{
+            ul{
+                margin: 0;
+            }
+        }
+    }
+    .credits{
+        padding: 0.5vw;
+        margin: 0;
+        background-color: $main;
+        text-align: center;
+        color: white;
     }
 }
