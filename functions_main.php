@@ -54,7 +54,7 @@ function get_footer(){
     if($conn->connect_error){
         die("connection_failed: " . $conn->connect_error);
     }
-    $sql_data = "SELECT * FROM owner_data";
+    $sql_data = "SELECT * FROM owner";
     $result_footer = $conn -> query($sql_data);
     echo '
     <div class="footer">
