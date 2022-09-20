@@ -15,19 +15,20 @@ echo '<head>
 /* If the admin is logged in */
 function get_admin_header(){
     if(isset($_SESSION['admin']))
-{
-    if($_SESSION['admin'] == true)
     {
-        echo '<div class="navbar-admin">
-        <ul>
-            <li><img src=""></li>
-            <li>Welcome '.$_SESSION['admin'].'</li>
-            <li><a href="">enter hub</a></li>
-            <a href="logout.php" class="bar-item"><span class="mobile">Logout</a>
-        </ul>
-    </div>';
+        if($_SESSION['admin'] == true)
+        {
+            echo '<div class="navbar-admin">
+            <ul>
+                <li><img src=""></li>
+                <li>Welcome '.$_SESSION['admin'].'</li>
+                <li><a href="">enter hub</a></li>
+                <a href="dashboard/logout.php" class="bar-item"><span class="mobile">Logout</a>
+            </ul>
+        </div>';
+        }
+        else{};
     }
-}
 }
 /* display a header navbar */
 function get_header(){
