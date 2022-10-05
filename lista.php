@@ -34,7 +34,7 @@ $results = $conn->query($sql);
                 if($results->num_rows>0){
                     while($row = $results->fetch_assoc()) {
                     echo '<div class="product_box">
-                    <img src="img/'.$row['img'].'">
+                    <img src="img/stroje/'.$row['img'].'">
                     <p>'.$row['number'].'. '.$row['name_costume'].'</p>
                     <p>Rozmiary: '.$row['size'].'</p>
                     <p>'.$row['quantity'].'</p>
