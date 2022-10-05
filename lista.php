@@ -35,9 +35,8 @@ $results = $conn->query($sql);
                     while($row = $results->fetch_assoc()) {
                     echo '<div class="product_box">
                     <img src="img/'.$row['img'].'">
-                    <p class="numer">'.$row['number'].'</p>
-                    <p>'.$row['name_costume'].'</p>
-                    <p>'.$row['size'].' / '.$row['price'].'</p>
+                    <p>'.$row['number'].'. '.$row['name_costume'].'</p>
+                    <p>Rozmiary: '.$row['size'].'</p>
                     <p>'.$row['quantity'].'</p>
                     <button>Sprawdź</button>
                     </div>';

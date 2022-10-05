@@ -154,6 +154,9 @@ header {
     flex-flow: row wrap;
     position: relative;
     justify-content: center;
+    p{
+        margin: 0;
+    }
     .product_box {
         margin: 8px;
         flex: 0 1 calc(15% - 8px);

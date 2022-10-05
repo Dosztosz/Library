@@ -218,6 +218,10 @@ header nav ul {
           justify-content: center;
 }
 
+.product_list p {
+  margin: 0;
+}
+
 .product_list .product_box {
   margin: 8px;
   -webkit-box-flex: 0;

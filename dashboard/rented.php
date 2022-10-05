@@ -3,10 +3,10 @@
     include ('../database/session_admin.php');
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
-    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.id_product, costumes.name_costume, costumes.size, rentals.status  
+    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.product_id, costumes.name_costume, costumes.size, rentals.status  
     FROM rentals 
     INNER JOIN costumes 
-    ON rentals.costume_id = costumes.id_product";
+    ON rentals.costume_id = costumes.product_id";
     $results = $conn->query($sql);
 
 ?>
@@ -48,7 +48,7 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['id_product'].'">Confirm</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
                                 <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
                             </tr>
                             ';
@@ -62,8 +62,8 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['id_product'].'">Confirm</a></td>
-                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['id_product'].'">Edit</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['product_id'].'">Edit</a></td>
                             </tr>
                             ';
                             }
