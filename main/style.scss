@@ -161,17 +161,18 @@ header {
         margin: 8px;
         flex: 0 1 calc(15% - 8px);
         /* <-- adjusting for margin */
-        width: 200px;
-        border-radius: 15px;
-        border: 1px solid black;
+        width: 350px;
         display: flex;
         flex-direction: column;
         text-align: center;
         img {
-            height: 100%;
-            width: 100%;
-            object-fit: contain
+            width:  350px;
+            height: 350px;
+            object-fit:contain;
+            border-radius: 15px;
         }
+        border-radius: 15px;
+        border: 1px solid black;
     }
 }
 .navbar-admin {

@@ -38,7 +38,6 @@ $results = $conn->query($sql);
                     <p>'.$row['number'].'. '.$row['name_costume'].'</p>
                     <p>Rozmiary: '.$row['size'].'</p>
                     <p>'.$row['quantity'].'</p>
-                    <button>Sprawdź</button>
                     </div>';
                     }
                 }
