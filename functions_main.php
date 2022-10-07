@@ -35,7 +35,6 @@ function get_admin_header(){
 function get_header(){
 echo'
 <header>
-    <div class="info-bar">Bochnia 32-700 ul. Józefa Romana 25</div>
     <div class="logo"><a href="index.php"><img src="img/logo.png"></a></div>
     <nav>
         <ul>
@@ -51,14 +50,7 @@ echo'
 
 /* display a footer navbar */
 function get_footer(){
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    $conn->set_charset("utf8");
-    if($conn->connect_error){
-        die("connection_failed: " . $conn->connect_error);
-    }
-    $sql_data = "SELECT * FROM owner";
-    $result_footer = $conn -> query($sql_data);
-    echo '
+    echo'
     <div class="footer">
     <div class="container_flex">
     <div class="row">
@@ -73,13 +65,11 @@ function get_footer(){
         </div>
         <div class="row">
             <h3>Kontakt</h3>
-            <ul>';
-                if($result_footer->num_rows>0){
-                    while($row = $result_footer->fetch_assoc()) {
-                    echo' <li>'.$row['open_hours'].'</li><li>'.$row['telephone'].'</li><li>'.$row['street'].'</li><li>'.$row['city'].'</li>';
-                    }
-                }
-    echo'</ul>
+            <ul>
+                <li>Józefa Romana 25</li>
+                <li>32-700 Bochnia</li>
+                <li>tel. +48 602 487 679</li>
+            </ul>
         </div>
     </div>
         <div class="credits">Wykonał Tomasz Dębosz dosztosz@int.pl</div>

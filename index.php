@@ -11,12 +11,11 @@ get_head();
 <body>
     <div>
         <?php
-        get_admin_header();
         get_header(); 
         ?>
         <div>
-            <div class="header">
-                <img src="img/banner.jpg" class="bg" alt="">
+            <div class="hero">
+                <img src="img/banner.jpg" alt="">
             </div>
             <div class="image-row" alt="wyświetla liste">
                 <a href="lista.php">
