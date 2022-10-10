@@ -5,13 +5,7 @@ include ('database/connect.php');
 session_start(); 
 get_head();
 $site_title = "Products";
-switch($_POST['filter']){
-    case 'halloween':
-        $sql = "";
-        break;
-}
-$sql = "SELECT * FROM costumes ";
-
+$sql = "SELECT * FROM costumes";
 $results = $conn->query($sql);
 
 ?>
@@ -31,7 +25,6 @@ $results = $conn->query($sql);
                 <?php
                 if($results->num_rows>0){
                     while($row = $results->fetch_assoc()) {
-
                     echo '<div class="product_box">
                     <img src="img/stroje/'.$row['img'].'">
                     <h2>'.$row['number'].'. '.$row['name_costume'].'</h2>
