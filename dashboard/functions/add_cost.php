@@ -1,6 +1,6 @@
 <?php
 include ('session.php');
-include ('connect.php');
+include ('../../database/connect.php');
 
 /*Line to including photos to the products with database*/
 if(isset($_FILES['image'])){

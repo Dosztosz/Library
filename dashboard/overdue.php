@@ -15,13 +15,13 @@
 <html lang="en">
 
 <head>
-    <?php include ('includes/head.php') ?>
+    <?php include ('templates/head.php') ?>
 </head>
 
 <body>
-<?php include('includes/header.php') ?>
+<?php include('templates/header.php') ?>
     <div class="content">
-        <?php include('includes/navbar-top.php') ?>
+        <?php include('templates/navbar-top.php') ?>
         <div class="list">
             <h1><?php echo $site_title; ?></h1>
             <table>

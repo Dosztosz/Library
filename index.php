@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <?php 
 include ('database/config.php');
-include ('functions_main.php');
 session_start();
-get_head();
 
  ?>
+ <?php require_once('resources/templates/head.php') ?>
 <body>
     <div>
-        <?php
-        get_header(); 
-        ?>
+        <?php require_once('resources/templates/footer.php') ?>
         <div>
             <div class="hero">
                 <img src="img/banner.jpg" alt="">
@@ -41,6 +38,6 @@ get_head();
             </div>
         </div>
     </div>
-    <?php get_footer()?>
+    <?php require_once('resources/templates/footer.php') ?>
 </body>
 </html>

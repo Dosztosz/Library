@@ -14,13 +14,13 @@
 <html lang="en">
 
 <head>
-    <?php include ('includes/head.php') ?>
+    <?php include ('templates/head.php') ?>
 </head>
 
 <body>
-<?php include('includes/header.php') ?>
+<?php include('templates/header.php') ?>
     <div class="content">
-        <?php include('includes/navbar-top.php') ?>
+        <?php include('templates/navbar-top.php') ?>
         <div class="list">
             <h1><?php echo $site_title; ?></h1>
             <table>
@@ -48,7 +48,7 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_idtemplates/'].'">Confirm</a></td>
                                 <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
                             </tr>
                             ';
@@ -62,8 +62,8 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
-                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['product_id'].'">Edit</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_idtemplates/'].'">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['product_idtemplates/'].'">Edit</a></td>
                             </tr>
                             ';
                             }
