@@ -1,9 +1,7 @@
 <?php
-include ('functions_main.php');
 include ('database/config.php');
 include ('database/connect.php');
 session_start(); 
-get_head();
 $site_title = "Products";
 if(isset($_POST['filter'])){
     switch($_POST['filter']){
@@ -21,13 +19,11 @@ $results = $conn->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 
-<?php get_head(); ?>
+<?php require_once('resources/templates/head.php') ?>
 
 <body>
     <div>
-        <?php 
-        get_header(); 
-        ?>
+        <?php require_once('resources/templates/header.php') ?>
         <div class="container">
             <div class="product_list">
                 <?php
@@ -46,6 +42,7 @@ $results = $conn->query($sql);
             </div>
         </div>
     </div>
+    <?php require_once('resources/templates/footer.php') ?>
 </body>
 
 </html>

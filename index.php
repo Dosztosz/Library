@@ -9,7 +9,7 @@ session_start();
  <?php require_once('resources/templates/head.php') ?>
 <body>
     <div>
-        <?php require_once('resources/templates/footer.php') ?>
+        <?php require_once('resources/templates/header.php') ?>
         <div>
             <div class="hero">
                 <img src="img/banner.jpg" alt="">
