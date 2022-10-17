@@ -15,7 +15,6 @@ a {
 header {
   background-color: #0083c4;
 }
-
 header .info-bar {
   width: 100%;
   padding: 5px;
@@ -23,25 +22,18 @@ header .info-bar {
   text-align: center;
   color: white;
 }
-
 header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 20px;
 }
-
 header .logo img {
   height: 60px;
 }
-
 header .logo p {
   color: white;
   font-size: 1.25rem;
 }
-
 header nav {
   background-color: #006091;
   width: 100vw;
@@ -49,38 +41,23 @@ header nav {
   padding-bottom: 5px;
   color: white;
 }
-
 header nav ul {
   margin-left: 20vw;
   margin-right: 20vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   list-style: none;
 }
 
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0;
 }
-
 .hero img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   z-index: 0;
 }
@@ -89,62 +66,46 @@ header nav ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .image-row a {
   text-decoration: none;
   color: white;
 }
-
 .image-row .box {
   display: block;
   width: 40vw;
   height: 20vw;
   margin: 10px;
 }
-
 .image-row .box h2 {
   padding-top: 14vw;
   padding-left: 15px;
 }
-
 .image-row .men {
-  background-image: url("../img/main/pop-men.jpg");
+  background-image: url("../../img/main/pop-men.jpg");
   background-size: cover;
 }
-
 .image-row .woman {
-  background-image: url("../img/main/pop-womens.jpg");
+  background-image: url("../../img/main/pop-womens.jpg");
   background-size: cover;
 }
-
 .image-row .boy {
-  background-image: url("../img/main/pop-boys.jpg");
+  background-image: url("../../img/main/pop-boys.jpg");
   background-size: cover;
 }
-
 .image-row .girl {
-  background-image: url("../img/main/pop-girls.jpg");
+  background-image: url("../../img/main/pop-girls.jpg");
   background-size: cover;
 }
 
 /* head */
 .list-container {
   margin: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 /*:::::::::::::[PRODUCT LIST]:::::::::::::*/
@@ -153,68 +114,41 @@ header nav ul {
 }
 
 .product_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .product_list p {
   margin: 0;
 }
-
 .product_list .product_box {
   margin: 8px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(18% - 8px);
-          flex: 0 1 calc(18% - 8px);
+  flex: 0 1 calc(18% - 8px);
   /* <-- adjusting for margin */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   border: 2px solid black;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-  -webkit-transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
   transition: 0.2s;
 }
-
 .product_list .product_box h2 {
   font-weight: 600;
   font-size: 1rem;
   padding: 0;
   margin: 0;
 }
-
 .product_list .product_box p {
   padding: 0;
   margin: 0;
 }
-
 .product_list .product_box:hover {
   background-color: aliceblue;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .product_list .product_box img {
   height: 400px;
   width: 250px;
@@ -228,17 +162,11 @@ header nav ul {
   width: 100%;
   height: 2rem;
 }
-
 .navbar-admin ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   float: right;
 }
-
 .navbar-admin li {
   margin: 0;
   margin-right: 20px;
@@ -254,24 +182,18 @@ header nav ul {
   margin-left: 0;
   margin-right: 0;
   background-color: #008acf;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding-right: 10vw;
   padding-left: 10vw;
 }
-
 .footer .container_flex .row ul {
   margin: 0;
 }
-
 .footer .credits {
   padding: 0.5vw;
   margin: 0;
   background-color: #0083c4;
   text-align: center;
   color: white;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
