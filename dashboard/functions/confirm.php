@@ -1,6 +1,7 @@
 <?php
-include ('session.php');
-include ('connect.php');
+include ('../../database/config.php');
+include ('../../database/session.php');
+include ('../../database/connect.php');
 
     $id = $_GET['id'];
     $status = $_GET['status'];
@@ -10,13 +11,8 @@ include ('connect.php');
     }
     else {
         $conn->query("UPDATE `rentals` SET `status` = '$status' WHERE `id_rent` = $id;");
-        $conn->query("UPDATE `costumes` SET `quantity` = `quantity` +1 WHERE `costumes`.`id_product` = $costume_id;");
+        $conn->query("UPDATE `costumes` SET `quantity` = `quantity` +1 WHERE `costumes`.`product_id` = $costume_id;");
         header('Location: ../rented.php');
     }
-
-
-
-
-
 
 ?>
