@@ -8,5 +8,4 @@
     <a href="overdue.php" class="bar-item"><span class="mobile">Overdue Rentals</a>
     <a href="add_costume.php" class="bar-item">Add costume</a>
     <a href="list.php" class="bar-item">List of Costumes</a>
-    <a href="sizes.php" class="bar-item">Sizes</a>
 </div>

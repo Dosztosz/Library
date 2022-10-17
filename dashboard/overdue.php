@@ -18,8 +18,9 @@
 </head>
 
 <body>
-<?php include('templates/header.php') ?>
-    <div class="content">
+<div class="row">
+        <?php include('templates/header.php') ?>
+        <div class="col-10 m-0 p-0 content">
         <?php include('templates/navbar-top.php') ?>
         <div class="list">
             <h1><?php echo $site_title; ?></h1>
@@ -60,6 +61,7 @@
             </table>
         </div>
     </div>
+</div>
 </body>
 
 </html>

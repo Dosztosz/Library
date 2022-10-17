@@ -1,5 +1,4 @@
 <?php
-    include ('../database/session_admin.php');
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
     $site_title = "Products";
@@ -17,8 +16,9 @@
 </head>
 
 <body>
-<?php include('templates/header.php') ?>
-    <div class="content">
+<div class="row">
+        <?php include('templates/header.php') ?>
+        <div class="col-10 m-0 p-0 content">
         <?php include('templates/navbar-top.php') ?>
         <div class="list">
             <div class="menu">
@@ -71,7 +71,7 @@
             ?>
         </div>
     </div>
-
+        </div>
     </div>
 </body>
 

@@ -1,5 +1,4 @@
 <?php
-    include ('../database/session_admin.php');
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
     $site_title = "Adding costume";
@@ -14,8 +13,9 @@
 </head>
 
 <body>
-<?php include('templates/header.php') ?>
-    <div class="content">
+<div class="row">
+        <?php include('templates/header.php') ?>
+        <div class="col-10 m-0 p-0 content">
         <?php include('templates/navbar-top.php') ?>
         <div class="login-box">
             <div class="rent-box">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-
+</div>
     </div>
 </body>
 
