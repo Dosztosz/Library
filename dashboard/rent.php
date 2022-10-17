@@ -1,5 +1,4 @@
 <?php
-
 require_once ('../database/config.php');
 require_once ('../database/connect.php');
 $site_title = "Rent a costume";

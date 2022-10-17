@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="pl">
-
 <?php 
-include ('database/config.php');
 session_start();
+include ('database/config.php');
 
  ?>
+<!DOCTYPE html>
+<html lang="pl">
  <?php require_once('resources/templates/head.php') ?>
 <body>
     <div>

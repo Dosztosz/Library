@@ -5,19 +5,19 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f6f7fb;
 }
-@import url('dashboard.scss');
-/* Style the side navigation */
+/* ---------side navigation bar-------------- */
 .sidenav {
-    border-top-right-radius: 20px;
     height: 100%;
-    width: 150px;
+    width: 200px;
     font-size: 15px;
     position: fixed;
     z-index: 1;
-    background-color: #2e4393;
+    background-color: #171717;
     overflow-x: hidden;
+    .logo{
+        padding-bottom: 70px;
+    }
     .dropdown {
         float: left;
         overflow: hidden;
@@ -70,20 +70,27 @@ body {
     }
 }
 
-
-/* Style the content */
-
+/* ---------content style area--------------- */
+.title{
+    margin-top: 60px;
+    padding-left: 300px;
+}
 .content {
+    /* -----Home.php data ------------------- */
+    background-color: #fcfcfc;
     .navbar-top {
         width: 100%;
-        height: 60px;
+        height: 80px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
         ul {
+            margin-top: 20px;
+            margin-right: 50px;
             display: flex;
             justify-content: space-between;
             float: right;
         }
         li {
-            margin-right: 20px;
+            margin-right: 50px;
             list-style: none;
         }
     }
@@ -97,55 +104,30 @@ body {
             margin-right: 50px;
         }
     }
-    .list {
-        margin-left: 200px;
-        margin-right: 200px;
-        margin-top: 100px;
-        padding: 40px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        background-color: white;
-        table {
-            width: 100%;
-        }
-        tr {
-            height: 40px;
-        }
-        td {
-            border-top: 1px solid black;
-        }
-        a {
-            color: blue;
-            &:hover {
-                color: aqua;
-            }
-        }
-    }
     a {
         text-decoration: none;
         color: black;
     }
     .widgets {
-        padding-left: 200px;
+        padding-left: 300px;
         display: flex;
         flex-wrap: wrap;
         .widgets-block {
-            padding: 1vw;
-            margin: 20px;
+            padding: 30px;
+            margin: 20px 20px 20px 0px;
             display: block;
-            height: 10vw;
-            width: 24vw;
+            width: 400px;
+            height: 120px;
             background-color: #ffffff;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
             transition: 0.6s;
             h2 {
                 text-align: left;
-                font-size: 1.5vw;
+                font-size: 1vw;
             }
             p {
                 margin-top: 1vw;
                 text-align: right;
-                font-size: 1.5vw;
+                font-size: 1vw;
             }
             &:hover {
                 background-color: aquamarine;
@@ -153,6 +135,37 @@ body {
         }
     }
 }
+
+
+/* ---------List Style ---------------------- */
+
+.list {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    table {
+        width: 100%;
+    }
+    tr {
+        height: 40px;
+    }
+    td {
+        border-top: 1px solid black;
+    }
+    a {
+        color: blue;
+        &:hover {
+            color: aqua;
+        }
+    }
+}
+
+
+/* ---------form bar------------------------- */
 .login-box {
     display: block;
     margin: auto;
@@ -176,9 +189,9 @@ body {
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
-        select{}
     }
 }
+
 .kafelki {
     display: flex;
     flex-wrap: wrap;
@@ -212,4 +225,50 @@ body {
     .mobile {
         display: none;
     }
+}
+.rent-box-dash{
+    padding: 1vw;
+    width: 30vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    transition: 0.6s;
+    border-radius: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    border-bottom: none;
+}
+.rent-box-info {
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.button {
+    height: 2vw;
+    width: 4vw;
+    background-color: #0ec180;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.dash-row {
+    padding-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .dash-column{
+        padding: 40px;
+    }
+    td{
+        padding: 10px 10px 10px 0px;
+        border-bottom: 1px solid rgb(161, 161, 161);
+    }
+}
+
+.shadow-main{
+    border: 3px solid rgb(238, 238, 238);
 }

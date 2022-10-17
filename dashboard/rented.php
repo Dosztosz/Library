@@ -1,6 +1,5 @@
 <?php
     $site_title="Rented Books";
-    include ('../database/session_admin.php');
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
     $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.price, rentals.phone, rentals.address, costumes.product_id, costumes.name_costume, costumes.size, rentals.status  
@@ -48,7 +47,7 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_idtemplates/'].'">Confirm</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
                                 <td><a href="functions/edit.php?id='.$row['id_rent'].'">Edit</a></td>
                             </tr>
                             ';
@@ -62,8 +61,8 @@
                                 <td>'.$row['date_return'].'</td>
                                 <td>'.$row['address'].'</td>
                                 <td>'.$row['phone'].'</td>
-                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_idtemplates/'].'">Confirm</a></td>
-                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['product_idtemplates/'].'">Edit</a></td>
+                                <td><a href="functions/confirm.php?id='.$row['id_rent'].'&status=done&product='.$row['product_id'].'">Confirm</a></td>
+                                <td><a href="functions/edit.php?id='.$row['id_rent'].'&product='.$row['product_id'].'">Edit</a></td>
                             </tr>
                             ';
                             }

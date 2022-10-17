@@ -1,4 +1,7 @@
 <div class="sidenav">
+    <div class="logo">
+        <img src="" alt="">
+    </div>
     <a href="home.php" class="bar-item"><i class="fa fa-house-user"></i><span class="mobile">Main Page</span></a>
     <a href="rent.php" class="bar-item"><span class="mobile">Rent a costume</a>
     <a href="rented.php" class="bar-item"><span class="mobile">Rented Costumes</a>

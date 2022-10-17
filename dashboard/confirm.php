@@ -15,9 +15,4 @@ include ('../../database/connect.php');
         header('Location: ../rented.php');
     }
 
-
-
-
-
-
 ?>

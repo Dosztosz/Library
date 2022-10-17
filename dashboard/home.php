@@ -1,9 +1,13 @@
 <?php
-    include ('../database/session_admin.php');
     require_once ('../database/config.php');
     require_once ('../database/connect.php');
+    require_once ('functions/check_overdue.php');
     $site_title = "Dashboard";
-    $sql = "SELECT * FROM rentals WHERE `status` = 'overdue'";
+    $sql ="SELECT rentals.id_rent, rentals.name, rentals.date_return, rentals.date_rent, rentals.size, costumes.product_id, costumes.name_costume, rentals.status, costumes.number  
+    FROM rentals 
+    INNER JOIN costumes 
+    ON rentals.costume_id = costumes.product_id";
+    $results = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,76 +24,58 @@
     <?php include('templates/header.php') ?>
     <div class="content">
         <?php include('templates/navbar-top.php') ?>
-        <h1 class="rental-box-h2">Rental Products</h1>
+        <div class="title">
+            <h2 class="rental-box-h2">Rental Products</h2>
+            <p>System zarządzania wypożyczalnią strojów</p>
+        </div>
         <div class="widgets">
             <a href="rent.php">
-                <div class="widgets-block">
+                <div class="widgets-block shadow-main">
                     <h2>Rent a product</h2>
                 </div>
             </a>
             <a href="overdue.php">
-            <div class="widgets-block">
+            <div class="widgets-block shadow-main">
                 <h2>Overdue Rentals</h2>
                 <p> Rentals</p>
             </div>
             </a>
             <a href="list.php">
-            <div class="widgets-block">
+            <div class="widgets-block shadow-main">
                 <h2>All available costumes</h2>
                 <p> Costumes</p>
             </div>
             </a>
         </div>
         <div class="dash-row">
-            <div class="dash-column">
-                <h2 class="rental-box-h2">Upcoming Rentals</h2>
-                <div class="rental-box-dash">
-                    <div class="rent-box-dash">
-                        <div class="rent-box-info">
-                            <p class="info-stroj">Indianin 104</p>
-                            <p class="info-imie">Tomasz Pekasz</p>
-                            <p>Zapłacone</p>
-                            <p>09.06.2022</p>
-                            <button class="button">Confirm</button>
-                        </div>
-                    </div>
-                    <div class="rent-box-dash">
-                        <div class="rent-box-info">
-                        <p>Indianin 104</p>
-                        <p>Tomasz Pekasz</p>
-                        <p>Zapłacone</p>
-                        <p>09.05.2022</p>
-                        <button class="button">Confirm</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dash-column">
-                <div id="myfirstchart" style="height: 250px;"></div>
+            <div class="dash-column shadow-main">
+                <h2>Opóźnione zamówienia</h2>
+                <table>
+                    <thead>
+                        <th>Strój</th>
+                        <th>Imię i Nazwisko</th>
+                        <th>Data oddania</th>
+                        <th>Przejdź do Zamówienia</th>
+                    </thead>
+                <?php
+                    if($results->num_rows>0){
+                        while($row = $results->fetch_assoc()){
+                            if($row['status'] == 'overdue'){
+                                $break = " ";
+                                echo'
+                                <tr>
+                                    <td>'.$row['number'].$break.$row['size'].$break.$row['name_costume'].'</td>
+                                    <td>'.$row['name'].'</td>
+                                    <td>'.$row['date_return'].'</td>
+                                    <td><button class="button">Confirm</button></td>
+                                </tr>';
+                            }
+                        }
+                    }
+                    ?>
+                </table>
             </div>
         </div>
     </div>
-    <script>
-        new Morris.Line({
-  // ID of the element in which to draw the chart.
-  element: 'myfirstchart',
-  // Chart data records -- each entry in this array corresponds to a point on
-  // the chart.
-  data: [
-    { year: '2008', value: 30 },
-    { year: '2009', value: 20 },
-    { year: '2010', value: 4 },
-    { year: '2011', value: 2 },
-    { year: '2012', value: 20 }
-  ],
-  // The name of the data record attribute that contains x-values.
-  xkey: 'year',
-  // A list of names of data record attributes that contain y-values.
-  ykeys: ['value'],
-  // Labels for the ykeys -- will be displayed when you hover over the
-  // chart.
-  labels: ['Value']
-});
-</script>
 </body>
 </html>
