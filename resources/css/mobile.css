@@ -1,0 +1,12 @@
+@media only screen and (max-width: 600px) {
+  header nav ul {
+    display: block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100vw;
+  }
+  header nav li {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

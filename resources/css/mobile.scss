@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    header{
+        nav{
+            ul{
+                display:block;
+                flex-wrap: wrap;
+                width: 100vw;
+            }
+            li{
+                width: 100%;
+            }
+        }
+    }
+  }

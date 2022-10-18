@@ -11,7 +11,13 @@ include ('database/config.php');
         <?php require_once('resources/templates/header.php') ?>
         <div>
             <div class="hero">
-                <img src="img/banner.jpg" alt="">
+                <div class="column">
+                    <h2><span style="color: #f0503e;">Wypożyczalnia</span><span style="color: #ffcf06"> Strojów</span></h2>
+                    <button>sprawdź</button>
+                </div>
+                <div class="column banner">
+                    <img src="img/kids.jpg" alt="">
+                </div>
             </div>
             <div class="image-row" alt="wyświetla liste">
                 <a href="lista.php">

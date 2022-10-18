@@ -25,6 +25,26 @@ $results = $conn->query($sql);
     <div>
         <?php require_once('resources/templates/header.php') ?>
         <div class="container">
+            <div class="filter_list">
+                <form action="" method="post">
+                    <select name="" id="">
+                        <option value="Jasełka">Jasełka</option>
+                        <option value="Karnawał">Karnawał</option>
+                        <option value="Halloween">Halloween</option>
+                        <option value="Wielkanoc">Wielkanoc</option>
+                        <option value="Lektura">Lektura / Literatura</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="104">104</option>
+                        <option value="116">116</option>
+                        <option value="128">128</option>
+                        <option value="140">140</option>
+                        <option value="158">158</option>
+                        <option value="duzy">Duży</option>
+                    </select>
+                    <button type="submit">Zatwierdź</button>
+                </form>
+            </div>
             <div class="product_list">
                 <?php
                 if($results->num_rows>0){
