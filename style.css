@@ -1,10 +1,12 @@
 /* Global Options */
 
 *{
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+h3{
+    font-size: 2rem;
+}
 a{
     text-decoration: none;
 }
@@ -53,11 +55,9 @@ nav a:hover{
     background-color: #326da3;
 }
 section{
-    width: 90%;
     margin: auto;
 }
 .hero{
-    margin: 7vh 0vw 7vh 0vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -74,7 +74,7 @@ section{
     font-size: 1rem;
 }
 .hero >div img{
-    height: 50vh;
+    height: 70vh;
 }
 
 @media only screen and (max-width: 800px) {
@@ -88,11 +88,11 @@ section{
 }
 
 .four-columns{
-    margin: 0vh 5vw 0vh 5vw;
+    margin: 0vh 6vw 10vh 6vw;
+    padding: 0vh 12vw 0vh 12vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: 30vh;
-    gap: 5px;
 }
 
 .four-columns >div{
@@ -122,16 +122,33 @@ section{
 }
 
 .map{
+    margin: 0;
+    padding: 5vh 10vw 5vh 10vw;
     background-color: #e9f2fa;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+
 }
 
 .map iframe{
-    width: 40vw;
-    height: 40vh;
+    width: 25vw;
+    height: 25vw;
+    border: none;
+}
+.map-text{
+    margin-top: 5vw;
+    margin-left: 8vw;
+    text-align: left;
+}
+.map-text h2{
+    font-size: 2rem;
+}
+.map-text p {
+    margin: 0;
 }
 footer{
+    margin: 0;
+    background-color: #26537e;
     text-align: center;
 }
