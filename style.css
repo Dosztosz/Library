@@ -1,0 +1,137 @@
+/* Global Options */
+
+*{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+}
+
+.button{
+    color: white;
+
+    padding: 1rem;
+    background-color: #387cbd;
+    border-radius: 1.25rem;
+    transition: 0.3s;
+}
+.button:hover{
+    background-color: #326da3;
+}
+.button:active{
+    background-color: #26537e;
+}
+
+
+nav{
+    margin: 0;
+    padding: 0;
+    background-color: #387cbd;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+}
+nav li{
+    padding: 15px;
+}
+nav a{
+    color: white;
+    transition: 0.3s;
+}
+nav a:hover{
+    background-color: #326da3;
+}
+section{
+    width: 90%;
+    margin: auto;
+}
+.hero{
+    margin: 7vh 0vw 7vh 0vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero-text{
+    float: center;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.hero h2{
+    font-size: 2rem;
+}
+.hero p{
+    font-size: 1rem;
+}
+.hero >div img{
+    height: 50vh;
+}
+
+@media only screen and (max-width: 800px) {
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .right-image{
+        display: none;
+    }
+}
+
+.four-columns{
+    margin: 0vh 5vw 0vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 30vh;
+    gap: 5px;
+}
+
+.four-columns >div{
+    padding: 1rem;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 800px) {
+    .four-columns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.boys{
+    background-image: url('img/main/pop-boys.jpg');
+}
+.girls{
+    background-image: url('img/main/pop-girls.jpg');
+}
+.women{
+    background-image: url('img/main/pop-womens.jpg');
+}
+.men{
+    background-image: url('img/main/pop-men.jpg');
+}
+
+.map{
+    background-color: #e9f2fa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.map iframe{
+    width: 40vw;
+    height: 40vh;
+}
+footer{
+    text-align: center;
+}
