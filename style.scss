@@ -1,9 +1,17 @@
 /* Global Options */
+@font-face {
+    font-family: ComicNeue;
+    src: url(resources/fonts/ComicNeue-Regular.ttf);
+  }
 
 *{
 
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2, h1{
+    font-family: "ComicNeue";
 }
 h3{
     font-size: 2rem;
@@ -12,6 +20,7 @@ a{
     text-decoration: none;
 }
 body{
+    margin: 0;
     overflow-x: none;
     color: #000;
     font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -19,6 +28,29 @@ body{
     font-weight: 400;
     line-height: 1.42857143;
     font-size: 1.4rem;
+}
+
+.btn{
+    border-radius: 15rem;
+    padding: 15px;
+    color: white;
+    background-color: #415b99;
+    
+}
+
+.hero{
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.25em;
+    }
+    a{
+        font-size: 1.25em;
+    }
+    img{
+        width: 40vw;
+    }
 }
 
 header ul, nav ul{
@@ -31,10 +63,13 @@ header ul, nav ul{
 }
 
 header{
-    background-color: #eeeeee;
-    border-top: 1px solid #d7d7d7;
-    border-bottom: 1px solid #d7d7d7;
+    width: 100vw;
+    margin: 0;
+    ul{
+        margin: 0;
+    }
 }
+
 
 nav {
     margin-top: 3rem;
@@ -45,6 +80,23 @@ nav {
     img{
         height: 3rem;
     }
+    a{
+        font-size: 1.2rem;
+        color: black;
+        transition: 0.2s;
+        &:hover{
+            color:#415b99;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        width: 100vw;
+    }
+    header ul, nav ul{
+        display: block;
+    }
 }
 
 .container{
@@ -53,14 +105,27 @@ nav {
 }
 
 
+.grid-2-rows{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
 .column-block{
-    width: 20rem;
-    height: 10rem;
+    width: 30vw;
+    height: 20vh;
+    border-radius: 1vw;
     background-size: cover;
-    h1{
-        text-align: left;
+    h2{
+        color: white;
+        opacity: 0.7;
+        padding: 3px;
+        position: absolute;
         font-size: 2rem;
-        background-color: white;
+        background-color: black;
     }
 }
 
@@ -75,4 +140,48 @@ nav {
 }
 .pop-men{
     background-image: url('img/main/pop-men.jpg'); 
+}
+
+.maps{
+    h1{
+        font-size: 2rem;
+
+    }
+    iframe{
+        border: none;
+        height: 40vh;
+        width: 40vw;
+    }
+}
+
+.contact{
+    text-align: left;
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+.about{
+    
+    img{
+        border-radius: 12px;
+    }
+}
+
+.text-center{
+    text-align: center;
+    h1{
+        margin-top: 5rem;
+        margin-bottom: 0;
+        font-size: 3rem;
+    }
+}
+
+footer, header{
+    background-color: rgb(65, 91, 153);
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
 }
