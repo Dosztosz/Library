@@ -1,0 +1,78 @@
+/* Global Options */
+
+*{
+
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+}
+body{
+    overflow-x: none;
+    color: #000;
+    font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+
+header ul, nav ul{
+    display: flex;
+    list-style: none;
+    li{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+header{
+    background-color: #eeeeee;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+nav {
+    margin-top: 3rem;
+    ul{
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        height: 3rem;
+    }
+}
+
+.container{
+    width: 1280px;
+    margin: auto;
+}
+
+
+.column-block{
+    width: 20rem;
+    height: 10rem;
+    background-size: cover;
+    h1{
+        text-align: left;
+        font-size: 2rem;
+        background-color: white;
+    }
+}
+
+.pop-boys{
+    background-image: url('img/main/pop-boys.jpg'); 
+}
+.pop-girls{
+    background-image: url('img/main/pop-girls.jpg'); 
+}
+.pop-woman{
+    background-image: url('img/main/pop-womens.jpg'); 
+}
+.pop-men{
+    background-image: url('img/main/pop-men.jpg'); 
+}

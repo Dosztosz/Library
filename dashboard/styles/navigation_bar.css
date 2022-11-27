@@ -5,16 +5,13 @@
   font-size: 15px;
   background-color: #171717;
 }
-
 .sidenav .logo {
   padding-bottom: 70px;
 }
-
 .sidenav .dropdown {
   float: left;
   overflow: hidden;
 }
-
 .sidenav .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -25,22 +22,17 @@
   font-family: inherit;
   margin: 0;
 }
-
 .sidenav a {
   color: white;
   padding: 16px;
   text-decoration: none;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .sidenav .active {
   background-color: #ddd;
-}
-/*# sourceMappingURL=navigation_bar.css.map */
+}/*# sourceMappingURL=navigation_bar.css.map */
